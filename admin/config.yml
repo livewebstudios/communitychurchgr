@@ -1,0 +1,180 @@
+# ============================================================
+# DECAP CMS CONFIG — Community Church of Glen Rock
+# ============================================================
+# PHASE 1 (preview on KH /newsite/): use backend: test-repo
+# PHASE 2 (live on Netlify):         use backend: git-gateway
+# Just swap the backend block below — everything else stays.
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  # ----------------------------------------------------------
+  # BLOG POSTS
+  # ----------------------------------------------------------
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title",          name: "title",   widget: "string" }
+      - { label: "Date",           name: "date",    widget: "datetime" }
+      - { label: "Author",         name: "author",  widget: "string", default: "Community Church of Glen Rock" }
+      - { label: "Featured Image", name: "image",   widget: "image",  required: false }
+      - { label: "Excerpt",        name: "excerpt", widget: "text" }
+      - { label: "Body",           name: "body",    widget: "markdown" }
+
+  # ----------------------------------------------------------
+  # PAGE CONTENT
+  # ----------------------------------------------------------
+  - name: "pages"
+    label: "Page Content"
+    files:
+
+      - label: "Home Page"
+        name: "home"
+        file: "_content/home.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Headline",           name: "headline",   widget: "string" }
+              - { label: "Subheadline",        name: "subhead",    widget: "string" }
+              - { label: "CTA Button 1 Label", name: "cta1_label", widget: "string" }
+              - { label: "CTA Button 1 URL",   name: "cta1_url",   widget: "string" }
+              - { label: "CTA Button 2 Label", name: "cta2_label", widget: "string" }
+              - { label: "CTA Button 2 URL",   name: "cta2_url",   widget: "string" }
+          - label: "Ministry Cards (3 boxes below hero)"
+            name: "ministry_cards"
+            widget: "list"
+            max: 3
+            min: 3
+            fields:
+              - { label: "Title",       name: "title",       widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Pastor Section"
+            name: "pastor"
+            widget: "object"
+            fields:
+              - { label: "Name",             name: "name",             widget: "string" }
+              - { label: "Bio",              name: "bio",              widget: "markdown" }
+              - { label: "Live Stream CTA",  name: "livestream_cta",   widget: "string" }
+              - { label: "Live Stream URL",  name: "livestream_url",   widget: "string" }
+          - label: "Mission Section"
+            name: "mission"
+            widget: "object"
+            fields:
+              - { label: "Headline",    name: "headline",    widget: "string" }
+              - { label: "Subheadline", name: "subheadline", widget: "string" }
+              - { label: "Body Text",   name: "body",        widget: "markdown" }
+          - label: "Membership and Support"
+            name: "membership_support"
+            widget: "object"
+            fields:
+              - { label: "Membership Headline",    name: "membership_headline",    widget: "string" }
+              - { label: "Membership Description", name: "membership_description", widget: "text" }
+              - { label: "Membership CTA Label",   name: "membership_cta",         widget: "string" }
+              - { label: "Support Headline",       name: "support_headline",       widget: "string" }
+              - { label: "Support Description",    name: "support_description",    widget: "text" }
+              - { label: "Support CTA Label",      name: "support_cta",            widget: "string" }
+              - { label: "Donation URL",           name: "donation_url",           widget: "string" }
+
+      - label: "About Page"
+        name: "about"
+        file: "_content/about.json"
+        fields:
+          - label: "Page Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - { label: "Tagline",  name: "tagline",  widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Intro",    name: "intro",    widget: "text" }
+          - label: "History Section"
+            name: "history"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Body",     name: "body",     widget: "markdown" }
+              - label: "Bullet Points"
+                name: "bullets"
+                widget: "list"
+                field: { label: "Point", name: "point", widget: "string" }
+          - label: "Event Spaces Section"
+            name: "event_spaces"
+            widget: "object"
+            fields:
+              - { label: "Headline",     name: "headline",     widget: "string" }
+              - { label: "Intro",        name: "intro",        widget: "text" }
+              - label: "Space Features"
+                name: "features"
+                widget: "list"
+                field: { label: "Feature", name: "feature", widget: "string" }
+              - { label: "Contact Note", name: "contact_note", widget: "string" }
+
+      - label: "Worship Page"
+        name: "worship"
+        file: "_content/worship.json"
+        fields:
+          - { label: "Page Headline", name: "headline",        widget: "string" }
+          - { label: "Intro Text",    name: "intro",           widget: "text" }
+          - label: "Service Times"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Service Name", name: "name",        widget: "string" }
+              - { label: "Day and Time", name: "time",        widget: "string" }
+              - { label: "Description",  name: "description", widget: "text", required: false }
+          - { label: "Live Stream URL",   name: "livestream_url",   widget: "string" }
+          - { label: "Live Stream Label", name: "livestream_label", widget: "string" }
+
+      - label: "Programs and Ministries Page"
+        name: "programs"
+        file: "_content/programs.json"
+        fields:
+          - { label: "Page Headline", name: "headline", widget: "string" }
+          - { label: "Intro Text",    name: "intro",    widget: "text" }
+          - label: "Ministry Items"
+            name: "ministries"
+            widget: "list"
+            fields:
+              - { label: "Ministry Name", name: "name",        widget: "string" }
+              - { label: "Description",   name: "description", widget: "text" }
+
+      - label: "Contact Page"
+        name: "contact"
+        file: "_content/contact.json"
+        fields:
+          - { label: "Page Headline", name: "headline",  widget: "string" }
+          - { label: "Intro Text",    name: "intro",     widget: "text" }
+          - { label: "Address",       name: "address",   widget: "string" }
+          - { label: "Phone",         name: "phone",     widget: "string" }
+          - { label: "Email",         name: "email",     widget: "string" }
+          - { label: "Office Hours",  name: "hours",     widget: "text",   required: false }
+          - { label: "Map Embed URL", name: "map_embed", widget: "string" }
+
+      - label: "Site Settings"
+        name: "settings"
+        file: "_content/settings.json"
+        fields:
+          - { label: "Site Name", name: "site_name", widget: "string" }
+          - { label: "Tagline",   name: "tagline",   widget: "string" }
+          - { label: "Phone",     name: "phone",     widget: "string" }
+          - { label: "Email",     name: "email",     widget: "string" }
+          - { label: "Address",   name: "address",   widget: "string" }
+          - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+          - { label: "YouTube URL",  name: "youtube",  widget: "string", required: false }
+          - label: "Navigation Links"
+            name: "nav"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL",   name: "url",   widget: "string" }

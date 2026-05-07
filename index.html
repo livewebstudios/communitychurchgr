@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Church of Glen Rock | Glen Rock, NJ</title>
+  <meta name="description" content="Welcome to Community Church of Glen Rock. Join us for worship every Sunday at 10 AM. A vibrant, inclusive community of faith in Glen Rock, NJ.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Community Church of Glen Rock | Glen Rock, NJ">
+  <meta property="og:description" content="Experience the warmth of fellowship, the power of faith, and the joy of community at our vibrant congregation in Glen Rock, NJ.">
+  <meta property="og:image" content="https://communitychurchgr.com/images/hero-home.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://communitychurchgr.com/">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://communitychurchgr.com/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Homepage-specific styles -->
+  <style>
+    /* ---- PHOTO MOSAIC ---- */
+    .photo-mosaic {
+      position: relative;
+      padding: 0;
+      overflow: hidden;
+    }
+    .mosaic-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      grid-template-rows: 280px 280px;
+      gap: 6px;
+      max-width: 100%;
+    }
+    .mosaic-grid .mosaic-item {
+      overflow: hidden;
+      position: relative;
+    }
+    .mosaic-grid .mosaic-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .mosaic-grid .mosaic-item:hover img {
+      transform: scale(1.06);
+    }
+    .mosaic-item--tall {
+      grid-row: span 2;
+    }
+    /* Floating worship card — high-impact CTA (brand teal / gold, no template gradients) */
+    .mosaic-floating-card {
+      position: absolute;
+      bottom: 36px;
+      right: 36px;
+      z-index: 5;
+      max-width: 340px;
+      padding: 2.35rem 2.85rem 2.5rem;
+      color: var(--white);
+      background: var(--teal);
+      background: linear-gradient(
+        155deg,
+        var(--teal-mid) 0%,
+        var(--teal) 44%,
+        var(--teal-dk) 100%
+      );
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.1) inset,
+        0 28px 56px rgba(58, 107, 107, 0.42),
+        0 10px 28px rgba(0, 0, 0, 0.22);
+      transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .mosaic-floating-card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.12) inset,
+        0 36px 64px rgba(58, 107, 107, 0.5),
+        0 14px 32px rgba(0, 0, 0, 0.26);
+    }
+    .mosaic-floating-card h3 {
+      font-family: var(--font-sans);
+      color: var(--gold-lt);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      margin-bottom: 0.65rem;
+      text-transform: uppercase;
+    }
+    .mosaic-floating-card__tagline {
+      margin: 0;
+    }
+    .mosaic-floating-card__lead {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: clamp(1.65rem, 2.8vw, 2.05rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.22);
+      margin-bottom: 0.35rem;
+    }
+    .mosaic-floating-card__detail {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.92);
+      line-height: 1.5;
+      margin-bottom: 1.15rem;
+    }
+    .mosaic-floating-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      color: var(--gold-lt);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(232, 184, 74, 0.45);
+      padding-bottom: 0.12em;
+      transition: color 0.25s ease, border-color 0.25s ease, letter-spacing 0.25s ease;
+    }
+    .mosaic-floating-card a:hover {
+      color: var(--white);
+      border-bottom-color: rgba(255, 255, 255, 0.55);
+      letter-spacing: 0.2em;
+    }
+    .mosaic-floating-card a:focus-visible {
+      outline: none;
+      border-radius: 2px;
+      box-shadow: var(--focus-ring-light);
+    }
+    .mosaic-floating-card a:active {
+      opacity: 0.92;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mosaic-floating-card,
+      .mosaic-floating-card:hover {
+        transform: none;
+      }
+      .mosaic-floating-card a:hover {
+        letter-spacing: 0.18em;
+      }
+    }
+
+    /* ---- PHOTO-BACKED MINISTRY CARDS ---- */
+    .ministry-card-photo {
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      display: flex;
+      align-items: flex-end;
+      padding: 2.5rem 2rem;
+      text-align: left;
+      background: var(--charcoal);
+      text-decoration: none;
+      color: inherit;
+      -webkit-tap-highlight-color: transparent;
+    }
+    a.ministry-card-photo:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring-light);
+    }
+    .ministry-card-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      transition: opacity 0.5s ease, transform 0.8s ease;
+    }
+    .ministry-card-photo:hover img {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+    .ministry-card-photo .card-content {
+      position: relative;
+      z-index: 2;
+    }
+    .ministry-card-photo h3 {
+      color: var(--gold-lt);
+      margin-bottom: 0.75rem;
+      font-size: 0.78rem;
+    }
+    .ministry-card-photo p {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.92rem;
+      line-height: 1.75;
+    }
+    .ministry-card-photo::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      z-index: 3;
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    .ministry-card-photo:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* ---- PRAYER BAR WITH PHOTO BG ---- */
+    .prayer-bar-photo {
+      position: relative;
+      padding: 5rem 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .prayer-bar-photo .prayer-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .prayer-bar-photo .prayer-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .prayer-bar-photo .prayer-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(247,241,230,0.88);
+    }
+    .prayer-bar-photo .prayer-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .prayer-bar-photo h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--charcoal);
+      margin-bottom: 0.75rem;
+    }
+    .prayer-bar-photo p { color: var(--charcoal-lt); }
+    .prayer-bar-photo a { color: var(--teal); font-weight: 400; }
+    .prayer-bar-photo a:hover { color: var(--teal-dk); }
+
+    /* ---- MINISTER ENHANCED ---- */
+    .minister-photos-col {
+      position: relative;
+    }
+    .minister-accent-photo {
+      width: 200px;
+      height: 160px;
+      object-fit: cover;
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      border: 4px solid var(--cream);
+    }
+
+    /* ---- PHOTO STRIP ---- */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      overflow: hidden;
+    }
+    .photo-strip-item {
+      overflow: hidden;
+      height: 260px;
+      position: relative;
+    }
+    .photo-strip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .photo-strip-item:hover img {
+      transform: scale(1.08);
+    }
+    .photo-strip-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(74,67,64,0.15);
+      transition: background 0.4s ease;
+    }
+    .photo-strip-item:hover::after {
+      background: rgba(74,67,64,0);
+    }
+
+    /* ---- MISSION WITH BG PHOTO ---- */
+    .mission-photo-bg {
+      position: relative;
+      overflow: hidden;
+    }
+    .mission-photo-bg .mission-bg-img {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .mission-photo-bg .mission-bg-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mission-photo-bg .mission-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(74,67,64,0.87);
+      z-index: 1;
+    }
+    .mission-photo-bg .mission-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ---- DUAL CTA WITH PHOTO BG ---- */
+    .dual-cta-photo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      max-width: 100%;
+    }
+    .dual-cta-photo-col {
+      position: relative;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .dual-cta-photo-col img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .dual-cta-photo-col:hover img {
+      transform: scale(1.04);
+    }
+    .dual-cta-photo-col .cta-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(74,67,64,0.7);
+      transition: background 0.4s ease;
+    }
+    .dual-cta-photo-col:hover .cta-overlay {
+      background: rgba(74,67,64,0.6);
+    }
+    .dual-cta-photo-col .cta-inner {
+      position: relative;
+      z-index: 2;
+      padding: 3rem 2rem;
+      max-width: 400px;
+    }
+    .dual-cta-photo-col h2 {
+      color: var(--white);
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    .dual-cta-photo-col p {
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    /* ---- COMMUNITY LIFE GALLERY ---- */
+    .gallery-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 200px;
+      gap: 8px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease, filter 0.4s ease;
+      filter: grayscale(15%);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.08);
+      filter: grayscale(0%);
+    }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(78,138,138,0);
+      transition: background 0.4s ease;
+    }
+    .gallery-item:hover::after {
+      background: rgba(78,138,138,0.1);
+    }
+    .gallery-item--tall { grid-row: span 2; }
+    .gallery-item--wide { grid-column: span 2; }
+
+    /* ---- RESPONSIVE OVERRIDES ---- */
+    @media (max-width: 768px) {
+      .mosaic-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px;
+      }
+      .mosaic-item--tall { grid-row: span 2; }
+      .mosaic-floating-card {
+        position: relative;
+        bottom: 0; right: 0;
+        max-width: 100%;
+        margin-top: -1px;
+        padding: 2rem 1.75rem 2.15rem;
+      }
+      .ministry-cards-grid { grid-template-columns: 1fr !important; }
+      .ministry-card-photo { min-height: 260px; }
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 180px 180px;
+      }
+      .dual-cta-photo { grid-template-columns: 1fr; }
+      .dual-cta-photo-col { min-height: 320px; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 160px;
+      }
+      .gallery-item--wide { grid-column: span 1; }
+      .gallery-item--tall { grid-row: span 1; }
+      .minister-accent-photo { display: none; }
+    }
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Community Church of Glen Rock",
+    "url": "https://communitychurchgr.com",
+    "telephone": "+1-201-444-4625",
+    "email": "info@communitychurchgr.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "354 Rock Road",
+      "addressLocality": "Glen Rock",
+      "addressRegion": "NJ",
+      "postalCode": "07452",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.9601,
+      "longitude": -74.1299
+    },
+    "openingHours": "Su 10:00-11:00",
+    "sameAs": []
+  }
+  </script>
+</head>
+
+<body data-content="home">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========== UTILITY BAR ========== -->
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <a href="tel:+12014444625">CALL: 201.444.4625</a>
+      <a href="#">EVENT CALENDAR</a>
+      <a href="about.html#membership">MEMBERSHIP</a>
+      <a href="#">SUPPORT US</a>
+    </div>
+  </div>
+
+  <!-- ========== MAIN NAV ========== -->
+  <header class="site-header" id="site-header">
+    <nav class="site-nav">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Community Church of Glen Rock" width="220" height="auto">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="has-dropdown">
+          <a href="about.html" class="nav-link">About <span class="arrow">&#9662;</span></a>
+          <ul class="dropdown">
+            <li><a href="about.html#history">Our Story &amp; History</a></li>
+            <li><a href="about.html#minister">Our Minister</a></li>
+            <li><a href="about.html#leadership">Leadership Team</a></li>
+            <li><a href="about.html#consistory">Consistory</a></li>
+            <li><a href="about.html#membership">Membership</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="worship.html" class="nav-link">Worship <span class="arrow">&#9662;</span></a>
+          <ul class="dropdown">
+            <li><a href="worship.html#services">Sunday Services</a></li>
+            <li><a href="worship.html#livestream">Live Stream</a></li>
+            <li><a href="worship.html#special-occasions">Special Occasions</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="programs.html" class="nav-link">Programs &amp; Ministries <span class="arrow">&#9662;</span></a>
+          <ul class="dropdown">
+            <li><a href="programs.html#all">All Programs</a></li>
+            <li><a href="programs.html#outreach">Outreach</a></li>
+            <li><a href="programs.html#thrift-shop">Thrift Shop</a></li>
+          </ul>
+        </li>
+        <li><a href="blog/" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== 1. HERO — CINEMATIC ========== -->
+    <section class="hero" style="min-height:90vh">
+      <div class="hero-bg">
+        <img src="images/hero-home.jpg" alt="Community Church of Glen Rock exterior in winter">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="section-label" style="color:var(--gold-lt);margin-bottom:1rem;font-size:0.7rem;letter-spacing:0.3em;">WELCOME HOME</span>
+        <h1 data-cms="hero-headline">Where Faith<br>Finds Family</h1>
+        <p data-cms="hero-subhead">Experience the warmth of fellowship, the power of faith, and the joy of community at our vibrant congregation.</p>
+        <div class="hero-buttons">
+          <a href="about.html#facilities" class="btn btn-outline" data-cms="hero-cta1">Our Facility</a>
+          <a href="programs.html" class="btn btn-outline" data-cms="hero-cta2">Events</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 2. PHOTO MOSAIC — CHURCH LIFE ========== -->
+    <section class="photo-mosaic">
+      <div class="mosaic-grid">
+        <div class="mosaic-item mosaic-item--tall">
+          <img src="images/congregation.jpg" alt="Congregation gathered for Sunday worship" loading="lazy">
+        </div>
+        <div class="mosaic-item">
+          <img src="images/fellowship.jpg" alt="Young people in fellowship and conversation" loading="lazy">
+        </div>
+        <div class="mosaic-item">
+          <img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy">
+        </div>
+        <div class="mosaic-item">
+          <img src="images/choir.jpg" alt="Church choir performing" loading="lazy">
+        </div>
+        <div class="mosaic-item">
+          <img src="images/contemporary-service.jpg" alt="Community gathering in fellowship hall" loading="lazy">
+        </div>
+      </div>
+      <div class="mosaic-floating-card">
+        <h3>Join us</h3>
+        <p class="mosaic-floating-card__tagline">
+          <span class="mosaic-floating-card__lead">Sunday Worship</span>
+          <span class="mosaic-floating-card__detail">Every Sunday at 10:00 AM</span>
+        </p>
+        <a href="worship.html" aria-label="Worship times and Sunday services — learn more">Learn More &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ========== 3. MINISTRY CARDS — PHOTO-BACKED ========== -->
+    <div class="section-header">
+      <h2>Discover Our Community</h2>
+    </div>
+
+    <section class="ministry-cards">
+      <div class="ministry-cards-grid reveal-stagger">
+
+        <a class="ministry-card-photo" href="worship.html" aria-label="Worship: Sunday services and sanctuary">
+          <img src="images/interior.jpg" alt="" loading="lazy" decoding="async">
+          <div class="card-content">
+            <h3>Worship</h3>
+            <p data-cms="card-worship">A sacred gathering where hearts unite in praise, reflection, and spiritual growth.</p>
+          </div>
+        </a>
+
+        <a class="ministry-card-photo" href="programs.html" aria-label="Programs and ministries: outreach and community life">
+          <img src="images/outreach-hands.jpg" alt="" loading="lazy" decoding="async">
+          <div class="card-content">
+            <h3>Ministry</h3>
+            <p data-cms="card-ministry">The embodiment of compassion and service, enriching lives and fostering belonging within our congregation.</p>
+          </div>
+        </a>
+
+        <a class="ministry-card-photo" href="about.html#membership" aria-label="Membership: join our congregation">
+          <img src="images/fellowship.jpg" alt="" loading="lazy" decoding="async">
+          <div class="card-content">
+            <h3>Membership</h3>
+            <p data-cms="card-membership">More than a commitment &mdash; an invitation to join a supportive community and grow in faith together.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ========== 4. PRAYER REQUEST — PHOTO BG ========== -->
+    <section class="prayer-bar-photo reveal">
+      <div class="prayer-bg">
+        <img src="images/prayer.jpg" alt="Prayer and reflection" loading="lazy">
+      </div>
+      <div class="prayer-overlay"></div>
+      <div class="prayer-inner">
+        <h2>Would you like a prayer request?</h2>
+        <p>Please send an email to <a href="mailto:info@communitychurchgr.com">info@communitychurchgr.com</a> or call the office at <a href="tel:+12014444625">(201) 444-4625</a></p>
+      </div>
+    </section>
+
+    <!-- ========== 5. OUR MINISTER — ENHANCED ========== -->
+    <section class="minister-section">
+      <div class="minister-grid reveal">
+
+        <div class="minister-photos-col">
+          <div class="minister-photo">
+            <img src="images/pastor-ennis.jpg" alt="Rev. Mark William Ennis" width="380" height="460">
+          </div>
+          <img src="images/sermon.jpg" alt="Sunday sermon" class="minister-accent-photo" loading="lazy">
+        </div>
+
+        <div class="minister-bio">
+          <span class="section-label">Our Minister</span>
+          <h2 data-cms="pastor-name">I'm Rev. Mark William Ennis</h2>
+          <p data-cms="pastor-bio">God called me to ministry when I was four years old, and I have been an ordained minister in the Reformed Church in America for the past forty years. I have ministered in parish settings as I've nurtured, counselled, preached, and prayed with people of all ages, backgrounds, and experiences. I developed a love for storytelling as a volunteer chaplain at a Christian summer camp. Currently, I am an interim pastor and hospice chaplain. I am a preacher, teacher, weekly blogger and podcaster, as well as the author of two books, about people who are healing spiritually, with a third in process. I can help you on your journey toward spiritual growth or healing. Contact me if you would like my assistance and please hear my podcasts and read my blogs. I hope that they will bless you.</p>
+          <a href="https://www.youtube.com/@communitychurchofglenrock8594/stream"
+             class="btn btn-gold" target="_blank" rel="noopener"
+             data-cms="livestream-cta">View our LIVE stream here each Sunday at 10:00am</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== 6. PHOTO STRIP — CHURCH MOMENTS ========== -->
+    <div class="photo-strip">
+      <div class="photo-strip-item"><img src="images/christmas-eve.jpg" alt="Christmas Eve candlelight service" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/luncheon.jpg" alt="Community luncheon gathering" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/communion.jpg" alt="Communion Sunday" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/palm-sunday.jpg" alt="Palm Sunday celebration" loading="lazy"></div>
+    </div>
+
+    <!-- ========== 7. MISSION — CINEMATIC ========== -->
+    <div class="section-header">
+      <h2>Our Mission</h2>
+    </div>
+
+    <section class="mission-section mission-photo-bg">
+      <div class="mission-bg-img">
+        <img src="images/congregation.jpg" alt="Our congregation" loading="lazy">
+      </div>
+      <div class="mission-bg-overlay"></div>
+      <div class="mission-content reveal">
+        <p class="subheadline" data-cms="mission-subheadline">A Vibrant and Inclusive Spiritual Community</p>
+        <p data-cms="mission-body">A vibrant and inclusive spiritual community where individuals from all walks of life can find acceptance, support, and opportunities for personal and collective growth. Rooted in the teachings of Jesus Christ, we strive to embody love, compassion, and justice in our interactions with one another and the world around us. Through meaningful worship, transformative ministries, and intentional fellowship, we seek to cultivate an environment where all are empowered to explore their faith, nurture their spiritual journey, and make a positive difference in the lives of others.</p>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- ========== 8. MEMBERSHIP + SUPPORT — PHOTO HERO CARDS ========== -->
+    <div class="dual-cta-photo">
+
+      <div class="dual-cta-photo-col">
+        <img src="images/contemporary-service.jpg" alt="Church community gathering" loading="lazy">
+        <div class="cta-overlay"></div>
+        <div class="cta-inner">
+          <h2 data-cms="membership-headline">Membership</h2>
+          <p data-cms="membership-description">Experience the warmth of our community and the richness of spiritual growth &mdash; join us today!</p>
+          <a href="about.html#membership" class="btn btn-outline" data-cms="membership-cta">Join Us</a>
+        </div>
+      </div>
+
+      <div class="dual-cta-photo-col">
+        <img src="images/give.jpg" alt="Hands holding a gift of giving" loading="lazy">
+        <div class="cta-overlay"></div>
+        <div class="cta-inner">
+          <h2 data-cms="support-headline">Support Us</h2>
+          <p data-cms="support-description">Make a meaningful impact in our community and help us spread love, compassion, and hope &mdash; support us today!</p>
+          <a href="#" class="btn btn-outline" data-cms="support-cta">Donate</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========== 9. COMMUNITY LIFE GALLERY ========== -->
+    <div class="section-header">
+      <h2>Community Life</h2>
+    </div>
+
+    <section style="background:var(--cream-dk);padding-bottom:1rem;">
+      <div class="gallery-grid reveal-stagger">
+        <div class="gallery-item gallery-item--tall">
+          <img src="images/book-club.jpg" alt="Church book club meeting" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/children.jpg" alt="Children's ministry" loading="lazy">
+        </div>
+        <div class="gallery-item gallery-item--wide">
+          <img src="images/craft-day.jpg" alt="Craft day activities" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/souper-bowl.jpg" alt="Souper Bowl community event" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/bible-study.jpg" alt="Bible study group" loading="lazy">
+        </div>
+        <div class="gallery-item gallery-item--tall">
+          <img src="images/handbells.jpg" alt="Handbell choir" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/grace.jpg" alt="Moments of grace" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/blood-drive.jpg" alt="Community blood drive" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p data-cms="footer-address">354 Rock Road, Glen Rock, NJ 07452</p>
+        <p><a href="mailto:info@communitychurchgr.com" data-cms="footer-email">info@communitychurchgr.com</a></p>
+        <p><a href="tel:+12014444625" data-cms="footer-phone">(201) 444-4625</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#leadership">Leadership Team</a></li>
+          <li><a href="worship.html">Worship</a></li>
+          <li><a href="programs.html">Programs &amp; Ministries</a></li>
+          <li><a href="worship.html#special-occasions">Special Occasions</a></li>
+          <li><a href="blog/">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5!2d-74.1299!3d40.9601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s354+Rock+Road%2C+Glen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1"
+          width="100%" height="190" style="border:0;border-radius:4px;"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Community Church of Glen Rock">
+        </iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="https://livewebstudios.com" target="_blank" rel="noopener">
+        <img src="images/verifiedsecured.png" alt="Verified and Secured by Live Web Studios" width="110" height="auto">
+      </a>
+      <p>&copy; 2025 LIVEWEBSTUDIOS.COM &mdash; POWERED BY LIVE WEB STUDIOS</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="cms-loader.js"></script>
+
+</body>
+</html>

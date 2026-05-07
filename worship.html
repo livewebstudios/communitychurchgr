@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worship — Community Church of Glen Rock | Glen Rock, NJ</title>
+  <meta name="description" content="Join us for worship every Sunday at 10 AM. Experience heartfelt services, live streaming, and special occasions at Community Church of Glen Rock.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Worship — Community Church of Glen Rock | Glen Rock, NJ">
+  <meta property="og:description" content="Join us for worship every Sunday at 10 AM. Experience heartfelt services, live streaming, and special occasions at Community Church of Glen Rock.">
+  <meta property="og:image" content="https://communitychurchgr.com/images/hero-worship.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://communitychurchgr.com/worship.html">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://communitychurchgr.com/worship.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Page-specific styles -->
+  <style>
+    .hero-short { min-height: 40vh; }
+
+    /* Worship intro */
+    .worship-intro {
+      background: var(--cream);
+      padding: var(--section-pad) 2rem;
+      text-align: center;
+    }
+    .worship-intro p {
+      max-width: 750px;
+      margin: 0 auto;
+      font-family: var(--font-serif);
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--charcoal);
+    }
+
+    /* Full-width feature photo */
+    .feature-photo {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+    .feature-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Inline service photos */
+    .service-inline-photo {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      margin: 2rem 0;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+
+    /* ---- WORSHIP STYLE — 2 COLUMN ---- */
+    .worship-style-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .worship-style-text h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+    .worship-style-text .subheadline {
+      margin-bottom: 1.5rem;
+    }
+    .worship-style-text p {
+      margin-bottom: 1.25rem;
+    }
+    .worship-style-photo {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+    .worship-style-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      object-fit: cover;
+      border-radius: 0;
+      transition: transform 0.8s ease;
+    }
+    .worship-style-photo:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ---- LIVESTREAM WITH PHOTO BG ---- */
+    .livestream-photo-bg {
+      position: relative;
+      padding: 5rem 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .livestream-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .livestream-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .livestream-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(74,67,64,0.82);
+      z-index: 1;
+    }
+    .livestream-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .livestream-inner h2 {
+      color: var(--white);
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .livestream-inner p {
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* ---- PHOTO-BACKED VENUE CARDS ---- */
+    .venue-cards-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 0 2rem;
+    }
+    .venue-card-photo {
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      display: flex;
+      align-items: flex-end;
+      padding: 2.5rem 2rem;
+      text-align: left;
+      background: var(--charcoal);
+      cursor: pointer;
+    }
+    .venue-card-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      transition: opacity 0.5s ease, transform 0.8s ease;
+    }
+    .venue-card-photo:hover img {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+    .venue-card-photo .card-content {
+      position: relative;
+      z-index: 2;
+    }
+    .venue-card-photo h3 {
+      color: var(--gold-lt);
+      margin-bottom: 0.75rem;
+      font-size: 0.78rem;
+    }
+    .venue-card-photo p {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.92rem;
+      line-height: 1.75;
+    }
+    .venue-card-photo::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      z-index: 3;
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    .venue-card-photo:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* Special occasions intro text */
+    .occasions-intro {
+      max-width: 800px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    .occasions-intro p {
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---- PHOTO STRIP ---- */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      overflow: hidden;
+    }
+    .photo-strip-item {
+      overflow: hidden;
+      height: 260px;
+      position: relative;
+    }
+    .photo-strip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .photo-strip-item:hover img {
+      transform: scale(1.08);
+    }
+    .photo-strip-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(74,67,64,0.15);
+      transition: background 0.4s ease;
+    }
+    .photo-strip-item:hover::after {
+      background: rgba(74,67,64,0);
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 768px) {
+      .worship-style-grid {
+        grid-template-columns: 1fr;
+      }
+      .worship-style-photo img {
+        min-height: 280px;
+      }
+      .venue-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .venue-card-photo {
+        min-height: 260px;
+      }
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 180px 180px;
+      }
+    }
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Community Church of Glen Rock",
+    "url": "https://communitychurchgr.com",
+    "telephone": "+1-201-444-4625",
+    "email": "info@communitychurchgr.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "354 Rock Road",
+      "addressLocality": "Glen Rock",
+      "addressRegion": "NJ",
+      "postalCode": "07452",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.9601,
+      "longitude": -74.1299
+    },
+    "openingHours": "Su 10:00-11:00",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- GA4 — replace G-XXXXXXXX when client provides ID -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script> -->
+</head>
+
+<body data-content="worship">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========== UTILITY BAR ========== -->
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <a href="tel:+12014444625">CALL: 201.444.4625</a>
+      <a href="#">EVENT CALENDAR</a>
+      <a href="about.html#membership">MEMBERSHIP</a>
+      <a href="#">SUPPORT US</a>
+    </div>
+  </div>
+
+  <!-- ========== MAIN NAV ========== -->
+  <header class="site-header" id="site-header">
+    <nav class="site-nav">
+
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png"
+             alt="Community Church of Glen Rock"
+             width="220" height="auto">
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="about.html" class="nav-link">
+            About <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="about.html#history">Our Story &amp; History</a></li>
+            <li><a href="about.html#minister">Our Minister</a></li>
+            <li><a href="about.html#leadership">Leadership Team</a></li>
+            <li><a href="about.html#consistory">Consistory</a></li>
+            <li><a href="about.html#membership">Membership</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="worship.html" class="nav-link active">
+            Worship <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="worship.html#services">Sunday Services</a></li>
+            <li><a href="worship.html#livestream">Live Stream</a></li>
+            <li><a href="worship.html#special-occasions">Special Occasions</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="programs.html" class="nav-link">
+            Programs &amp; Ministries <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="programs.html#all">All Programs</a></li>
+            <li><a href="programs.html#outreach">Outreach</a></li>
+            <li><a href="programs.html#thrift-shop">Thrift Shop</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="blog/" class="nav-link">Blog</a>
+        </li>
+
+        <li>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== 1. HERO ========== -->
+    <section class="hero hero-short">
+      <div class="hero-bg">
+        <img src="images/hero-worship.jpg"
+             alt="Worship at Community Church of Glen Rock">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Worship</h1>
+      </div>
+    </section>
+
+    <!-- ========== 2. WORSHIP INTRO ========== -->
+    <section class="worship-intro reveal">
+      <p>Experience the heart of our faith community through worship at Community Church of Glen Rock.</p>
+    </section>
+
+    <!-- ========== 3. FEATURE PHOTO ========== -->
+    <div class="feature-photo">
+      <img src="images/congregation.jpg" alt="Congregation gathered for Sunday worship" loading="lazy">
+    </div>
+
+    <!-- ========== 4. SUNDAY SERVICES ========== -->
+    <div class="section-header">
+      <h2>Sunday Services</h2>
+    </div>
+
+    <section id="services" class="services-section reveal">
+      <div class="container">
+        <div class="content-block">
+          <ul class="services-list">
+            <li><strong>Sunday Worship Service:</strong> Every Sunday at 10:00 am in our air-conditioned sanctuary, featuring word and music.</li>
+            <li><strong>Additional Services:</strong> Services added during the Advent Season and Holy Week.</li>
+            <li><strong>Sacraments:</strong> Holy Baptism (including infants and adults) and the Lord's Supper (Communion) celebrated on the 1st Sunday of each month.</li>
+            <li><strong>Church School and Youth Group:</strong> Check back for updates.</li>
+            <li><strong>Quiet Space:</strong> Available in the church Narthex for young children during worship.</li>
+            <li><strong>Coffee Hour:</strong> Join us for fellowship and refreshments immediately after the service in the Education Building's Drop-in Center.</li>
+          </ul>
+        </div>
+
+        <img src="images/communion.jpg" alt="Communion Sunday at Community Church" class="service-inline-photo" loading="lazy">
+
+        <!-- Worship Style — 2 Column Layout -->
+        <div class="worship-style-grid reveal">
+          <div class="worship-style-text">
+            <h2>Worship Style</h2>
+            <p class="subheadline">Rooted in Reverence, Inclusivity, and Joy</p>
+            <p>Guided by our belief in the transformative power of faith, our services are designed to create meaningful connections with one another and with the divine. Each Sunday, we come together in our air-conditioned sanctuary to engage in heartfelt expressions of worship through word and music.</p>
+            <p>Our worship format blends traditional elements with contemporary expressions, offering a dynamic and enriching experience for all who gather with us. We strive to create an atmosphere of warmth and welcome, where individuals from all walks of life can find acceptance and belonging.</p>
+            <p>Our services feature a balance of prayer, scripture readings, sermons, and musical offerings, designed to inspire and uplift the soul. Whether you are seeking solace, inspiration, or community, our worship services provide a sacred space for reflection, renewal, and connection.</p>
+          </div>
+          <div class="worship-style-photo">
+            <img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy">
+          </div>
+        </div>
+
+        <img src="images/choir.jpg" alt="Church choir performing" class="service-inline-photo" loading="lazy">
+
+      </div>
+    </section>
+
+    <!-- ========== 5. LIVE STREAM — PHOTO BACKGROUND ========== -->
+    <div class="section-header">
+      <h2>Live Stream</h2>
+    </div>
+
+    <section id="livestream" class="livestream-photo-bg reveal">
+      <div class="livestream-bg">
+        <img src="images/sermon.jpg" alt="Sunday sermon" loading="lazy">
+      </div>
+      <div class="livestream-overlay"></div>
+      <div class="livestream-inner">
+        <h2>Join Us From Anywhere</h2>
+        <p>Join our growing international community of congregants via livestream every Sunday at 10:00 AM.</p>
+        <a href="https://www.youtube.com/@communitychurchofglenrock8594/stream"
+           class="btn btn-outline" style="border-color:rgba(255,255,255,0.6);color:var(--white);"
+           target="_blank"
+           rel="noopener">Watch Live on YouTube</a>
+      </div>
+    </section>
+
+    <!-- ========== 6. SPECIAL OCCASIONS — PHOTO-BACKED CARDS ========== -->
+    <div class="section-header">
+      <h2>Special Occasions</h2>
+    </div>
+
+    <section id="special-occasions" class="special-occasions-section reveal" style="padding:0 0 var(--section-pad);">
+      <div class="occasions-intro">
+        <p>The Community Church of Glen Rock is conveniently located to public transportation and situated on quiet, spacious grounds. We welcome the use of our beautiful campus by interested parties in the extended community. Contact Kris Roy, Property Manager for more information.</p>
+      </div>
+
+      <div class="venue-cards-grid reveal-stagger">
+
+        <div class="venue-card-photo">
+          <img src="images/fellowship-hall.jpg" alt="Fellowship Hall" loading="lazy">
+          <div class="card-content">
+            <h3>Fellowship Hall</h3>
+            <p>Spacious hall for lectures, conferences, receptions, and events.</p>
+          </div>
+        </div>
+
+        <div class="venue-card-photo">
+          <img src="images/room1.jpg" alt="Education building meeting room" loading="lazy">
+          <div class="card-content">
+            <h3>Education Building</h3>
+            <p>Intimate adjoining spaces in our education building for smaller gatherings.</p>
+          </div>
+        </div>
+
+        <div class="venue-card-photo">
+          <img src="images/interior.jpg" alt="Church sanctuary" loading="lazy">
+          <div class="card-content">
+            <h3>Sanctuary</h3>
+            <p>Stunning sanctuary with excellent acoustics for weddings and concerts.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top:2.5rem;">
+        <a href="contact.html" class="btn btn-gold">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- ========== 7. PHOTO STRIP — WORSHIP MOMENTS ========== -->
+    <div class="photo-strip">
+      <div class="photo-strip-item"><img src="images/christmas-eve.jpg" alt="Christmas Eve candlelight service" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/palm-sunday.jpg" alt="Palm Sunday celebration" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/handbells.jpg" alt="Handbell choir" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/baptism.jpg" alt="Baptism ceremony" loading="lazy"></div>
+    </div>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p data-cms="footer-address">354 Rock Road, Glen Rock, NJ 07452</p>
+        <p>
+          <a href="mailto:info@communitychurchgr.com"
+             data-cms="footer-email">info@communitychurchgr.com</a>
+        </p>
+        <p>
+          <a href="tel:+12014444625"
+             data-cms="footer-phone">(201) 444-4625</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#leadership">Leadership Team</a></li>
+          <li><a href="worship.html">Worship</a></li>
+          <li><a href="programs.html">Programs &amp; Ministries</a></li>
+          <li><a href="worship.html#special-occasions">Special Occasions</a></li>
+          <li><a href="blog/">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5!2d-74.1299!3d40.9601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s354+Rock+Road%2C+Glen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1"
+          width="100%" height="190" style="border:0;border-radius:4px;"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Community Church of Glen Rock">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <a href="https://livewebstudios.com" target="_blank" rel="noopener">
+        <img src="images/verifiedsecured.png"
+             alt="Verified and Secured by Live Web Studios"
+             width="110" height="auto">
+      </a>
+      <p>&copy; 2025 LIVEWEBSTUDIOS.COM &mdash; POWERED BY LIVE WEB STUDIOS</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="cms-loader.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Community Church of Glen Rock | Glen Rock, NJ</title>
+  <meta name="description" content="Learn about Community Church of Glen Rock's rich history, leadership, and mission. A welcoming congregation in Glen Rock, NJ since 1895.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us — Community Church of Glen Rock | Glen Rock, NJ">
+  <meta property="og:description" content="Learn about Community Church of Glen Rock's rich history, leadership, and mission. A welcoming congregation in Glen Rock, NJ since 1895.">
+  <meta property="og:image" content="https://communitychurchgr.com/images/hero-about.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://communitychurchgr.com/about.html">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://communitychurchgr.com/about.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Page-specific styles -->
+  <style>
+    .hero-short { min-height: 40vh; }
+
+    /* About intro */
+    .about-intro {
+      background: var(--cream);
+      padding: var(--section-pad) 2rem;
+      text-align: center;
+    }
+    .about-intro p {
+      max-width: 750px;
+      margin: 0 auto;
+      font-family: var(--font-serif);
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--charcoal);
+    }
+
+    /* ---- PHOTO STRIP ---- */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      overflow: hidden;
+    }
+    .photo-strip-item {
+      overflow: hidden;
+      height: 260px;
+      position: relative;
+    }
+    .photo-strip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .photo-strip-item:hover img {
+      transform: scale(1.08);
+    }
+    .photo-strip-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(74,67,64,0.15);
+      transition: background 0.4s ease;
+    }
+    .photo-strip-item:hover::after {
+      background: rgba(74,67,64,0);
+    }
+
+    /* ---- MINISTER ENHANCED ---- */
+    .minister-photos-col {
+      position: relative;
+    }
+    .minister-accent-photo {
+      width: 200px;
+      height: 160px;
+      object-fit: cover;
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      border: 4px solid var(--cream);
+    }
+
+    /* ---- STAFF WITH BACKGROUND PHOTO ---- */
+    .staff-section {
+      position: relative;
+      padding: var(--section-pad) 2rem;
+      overflow: hidden;
+    }
+    .staff-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .staff-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .staff-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(247,241,230,0.92);
+      z-index: 1;
+    }
+    .staff-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .staff-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 2rem;
+    }
+    .staff-card {
+      text-align: center;
+    }
+    .initials-placeholder {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.75rem;
+    }
+    .staff-card h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+    .staff-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* Consistory section */
+    .consistory-section {
+      padding: var(--section-pad) 2rem;
+      background: var(--white);
+    }
+    .consistory-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .consistory-content p {
+      max-width: 800px;
+      margin: 0 auto 1.25rem;
+      text-align: center;
+    }
+    .consistory-grid {
+      max-width: var(--max-width);
+      margin: 2.5rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 2rem;
+    }
+
+    /* ---- HISTORY WITH INLINE PHOTOS ---- */
+    .history-section {
+      background: var(--cream);
+      padding: var(--section-pad) 2rem;
+    }
+    .history-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .history-content p {
+      margin-bottom: 1.25rem;
+    }
+    .history-inline-photo {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin: 2rem 0;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+    .history-photo-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .history-photo-pair img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+
+    /* ---- PHOTO-BACKED FACILITY CARDS ---- */
+    .facilities-section {
+      padding: var(--section-pad) 2rem;
+      background: var(--white);
+    }
+    .facilities-intro {
+      max-width: 800px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+    .facilities-intro p {
+      margin-bottom: 1.25rem;
+    }
+    .facilities-cards-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .facility-card-photo {
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      display: flex;
+      align-items: flex-end;
+      padding: 2.5rem 2rem;
+      text-align: left;
+      background: var(--charcoal);
+      cursor: pointer;
+    }
+    .facility-card-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      transition: opacity 0.5s ease, transform 0.8s ease;
+    }
+    .facility-card-photo:hover img {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+    .facility-card-photo .card-content {
+      position: relative;
+      z-index: 2;
+    }
+    .facility-card-photo h3 {
+      color: var(--gold-lt);
+      margin-bottom: 0.75rem;
+      font-size: 0.78rem;
+    }
+    .facility-card-photo p {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.92rem;
+      line-height: 1.75;
+    }
+    .facility-card-photo::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      z-index: 3;
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    .facility-card-photo:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* Membership section */
+    .membership-section {
+      background: var(--cream);
+      padding: var(--section-pad) 2rem;
+    }
+    .membership-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .membership-content p {
+      margin-bottom: 1.25rem;
+    }
+
+    /* Gold CTA bar */
+    .cta-bar {
+      background: var(--gold);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .cta-bar h2 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .cta-bar .btn-outline {
+      border-color: rgba(255,255,255,0.6);
+      color: var(--white);
+    }
+    .cta-bar .btn-outline:hover {
+      background: var(--white);
+      color: var(--gold);
+      border-color: var(--white);
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 768px) {
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 180px 180px;
+      }
+      .minister-accent-photo { display: none; }
+      .history-photo-pair {
+        grid-template-columns: 1fr;
+      }
+      .history-photo-pair img {
+        height: 200px;
+      }
+      .facilities-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .facility-card-photo {
+        min-height: 260px;
+      }
+    }
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Community Church of Glen Rock",
+    "url": "https://communitychurchgr.com",
+    "telephone": "+1-201-444-4625",
+    "email": "info@communitychurchgr.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "354 Rock Road",
+      "addressLocality": "Glen Rock",
+      "addressRegion": "NJ",
+      "postalCode": "07452",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+
+  <!-- GA4 — replace G-XXXXXXXX when client provides ID -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script> -->
+</head>
+
+<body data-content="about">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========== UTILITY BAR ========== -->
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <a href="tel:+12014444625">CALL: 201.444.4625</a>
+      <a href="#">EVENT CALENDAR</a>
+      <a href="about.html#membership">MEMBERSHIP</a>
+      <a href="#">SUPPORT US</a>
+    </div>
+  </div>
+
+  <!-- ========== MAIN NAV ========== -->
+  <header class="site-header" id="site-header">
+    <nav class="site-nav">
+
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png"
+             alt="Community Church of Glen Rock"
+             width="220" height="auto">
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="about.html" class="nav-link active">
+            About <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="about.html#history">Our Story &amp; History</a></li>
+            <li><a href="about.html#minister">Our Minister</a></li>
+            <li><a href="about.html#leadership">Leadership Team</a></li>
+            <li><a href="about.html#consistory">Consistory</a></li>
+            <li><a href="about.html#membership">Membership</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="worship.html" class="nav-link">
+            Worship <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="worship.html#services">Sunday Services</a></li>
+            <li><a href="worship.html#livestream">Live Stream</a></li>
+            <li><a href="worship.html#special-occasions">Special Occasions</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="programs.html" class="nav-link">
+            Programs &amp; Ministries <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="programs.html#all">All Programs</a></li>
+            <li><a href="programs.html#outreach">Outreach</a></li>
+            <li><a href="programs.html#thrift-shop">Thrift Shop</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="blog/" class="nav-link">Blog</a>
+        </li>
+
+        <li>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== 1. PAGE HERO ========== -->
+    <section class="hero hero-short">
+      <div class="hero-bg">
+        <img src="images/hero-about.jpg"
+             alt="Community Church of Glen Rock">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>About Us</h1>
+      </div>
+    </section>
+
+    <!-- ========== 2. ABOUT INTRO ========== -->
+    <section class="about-intro reveal">
+      <p>Explore the rich tapestry of our history, values, and mission as we journey together in faith and community at Community Church of Glen Rock.</p>
+    </section>
+
+    <!-- ========== 3. PHOTO STRIP — OUR CHURCH ========== -->
+    <div class="photo-strip">
+      <div class="photo-strip-item"><img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/congregation.jpg" alt="Congregation gathered for worship" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/choir.jpg" alt="Church choir performing" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/fellowship-hall.jpg" alt="Fellowship Hall" loading="lazy"></div>
+    </div>
+
+    <!-- ========== 4. OUR MINISTER ========== -->
+    <div class="section-header">
+      <h2>Our Minister</h2>
+    </div>
+
+    <section class="minister-section" id="minister">
+      <div class="minister-grid reveal">
+
+        <div class="minister-photos-col">
+          <div class="minister-photo">
+            <img src="images/pastor-ennis.jpg"
+                 alt="Rev. Mark William Ennis"
+                 width="380" height="460">
+          </div>
+          <img src="images/sermon.jpg" alt="Sunday sermon" class="minister-accent-photo" loading="lazy">
+        </div>
+
+        <div class="minister-bio">
+          <span class="section-label">Our Minister</span>
+          <h2>I'm Rev. Mark William Ennis</h2>
+          <p>God called me to ministry when I was four years old, and I have been an ordained minister in the Reformed Church in America for the past forty years. I have ministered in parish settings as I've nurtured, counselled, preached, and prayed with people of all ages, backgrounds, and experiences. I developed a love for storytelling as a volunteer chaplain at a Christian summer camp. Currently, I am an interim pastor and hospice chaplain. I am a preacher, teacher, weekly blogger and podcaster, as well as the author of two books, about people who are healing spiritually, with a third in process. I can help you on your journey toward spiritual growth or healing. Contact me if you would like my assistance and please hear my podcasts and read my blogs. I hope that they will bless you.</p>
+          <a href="https://www.youtube.com/@communitychurchofglenrock8594/stream"
+             class="btn btn-gold"
+             target="_blank"
+             rel="noopener">View our LIVE stream here each Sunday at 10:00am</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== 5. OUR STAFF — PHOTO BACKGROUND ========== -->
+    <div class="section-header">
+      <h2>Our Staff</h2>
+    </div>
+
+    <section class="staff-section" id="leadership">
+      <div class="staff-bg">
+        <img src="images/contemporary-service.jpg" alt="Church community" loading="lazy">
+      </div>
+      <div class="staff-overlay"></div>
+      <div class="staff-inner">
+        <div class="staff-grid reveal-stagger">
+
+          <div class="staff-card">
+            <div class="initials-placeholder">KR</div>
+            <h4>Kris Roy</h4>
+            <p>Property Manager / Administrative Assistant</p>
+          </div>
+
+          <div class="staff-card">
+            <div class="initials-placeholder">JF</div>
+            <h4>Jessica Fry</h4>
+            <p>Financial Administrator / Program Co-ordinator</p>
+          </div>
+
+          <div class="staff-card">
+            <div class="initials-placeholder">JM</div>
+            <h4>Janet Montroy</h4>
+            <p>Music Director</p>
+          </div>
+
+          <div class="staff-card">
+            <div class="initials-placeholder">SB</div>
+            <h4>Stephanie Beaudoin</h4>
+            <p>Grace Notes Choir Director</p>
+          </div>
+
+          <div class="staff-card">
+            <div class="initials-placeholder">LJ</div>
+            <h4>Linda Johnson</h4>
+            <p>Custodian</p>
+          </div>
+
+          <div class="staff-card">
+            <div class="initials-placeholder">CC</div>
+            <h4>Connie Cassatta</h4>
+            <p>Nursery</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. OUR CONSISTORY ========== -->
+    <div class="section-header">
+      <h2>Our Consistory</h2>
+    </div>
+
+    <section class="consistory-section" id="consistory">
+      <div class="consistory-content reveal">
+        <p>RCA churches are governed by a Consistory composed of elders and deacons, elected by the congregation, and ordained into their offices. They are responsible for all aspects of the life of our congregation.</p>
+        <p>Elders have as their primary task the spiritual health of the congregation. Together as the Board of Elders they handle all matters concerning membership, including receiving new members and approving requests for baptism.</p>
+        <p>Deacons care for the material well-being of members of the church and the community. They have primary responsibility for the mission of the congregation as well as the congregation's physical properties.</p>
+        <p>The Community Church of Glen Rock has seven elders and seven deacons who serve on the consistory. Each is elected to a three-year term and can be re-elected to one further term.</p>
+      </div>
+
+      <div class="consistory-grid reveal-stagger">
+
+        <div class="staff-card">
+          <div class="initials-placeholder">KS</div>
+          <h4>Keith Stewart</h4>
+          <p>Deacon</p>
+        </div>
+
+        <div class="staff-card">
+          <div class="initials-placeholder">JV</div>
+          <h4>John Van Keuren</h4>
+          <p>Elder</p>
+        </div>
+
+        <div class="staff-card">
+          <div class="initials-placeholder">GS</div>
+          <h4>Gail Sternitzke</h4>
+          <p>Elder</p>
+        </div>
+
+        <div class="staff-card">
+          <div class="initials-placeholder">LB</div>
+          <h4>Laura Bird</h4>
+          <p>Deacon</p>
+        </div>
+
+        <div class="staff-card">
+          <div class="initials-placeholder">JF</div>
+          <h4>Jessica Fry</h4>
+          <p>Deacon</p>
+        </div>
+
+        <div class="staff-card">
+          <div class="initials-placeholder">SB</div>
+          <h4>Stephanie Beaudoin</h4>
+          <p>Deacon</p>
+        </div>
+
+        <div class="staff-card">
+          <div class="initials-placeholder">BV</div>
+          <h4>Betty Vella</h4>
+          <p>Elder</p>
+        </div>
+
+        <div class="staff-card">
+          <div class="initials-placeholder">LB</div>
+          <h4>Leslie Botz</h4>
+          <p>Deacon</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== 7. OUR HISTORY — WITH INLINE PHOTOS ========== -->
+    <div class="section-header">
+      <h2>Our History</h2>
+    </div>
+
+    <section class="history-section" id="history">
+      <div class="history-content reveal">
+        <p>The Community Church of Glen Rock began life with 20 members as the Reformed Church of Glen Rock in 1895. Meetings were first held in homes and then in the 'Red Schoolhouse,' which still stands at the corner of Rock Road and Ackerman Avenue. The Reverend John A. Van Neste preached there as well as in his own church in Ridgewood. In 1896 a small church was built, known as the 'little White Church.'</p>
+
+        <p>In 1920 our name was changed to The Community Church of Glen Rock, signaling that the church intended to be a church of and for the local community. By 1924 the church had outgrown its first building and erected its second building, the 'Stucco Church,' on the same site. The original building was used for education and remained in use into the 1950s.</p>
+
+        <img src="images/front.jpg" alt="Community Church of Glen Rock exterior" class="history-inline-photo" loading="lazy">
+
+        <p>Following the end of World War II the population of Glen Rock more than doubled as land was cleared, homes were built, schools were built or added onto, and our church again faced the need for expansion. In 1950 the Church began excavation for a new Sanctuary to be attached to the rear of the Stucco Church.</p>
+
+        <div class="history-photo-pair">
+          <img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy">
+          <img src="images/memorial-garden.jpg" alt="Memorial garden" loading="lazy">
+        </div>
+
+        <p>In 1958 the Education Building was constructed. In 1965 following several property acquisitions the large Fellowship Hall was built and the Stucco Church was demolished to make way for a new entrance to the sanctuary. Along with expanded parking the campus occupies a large piece of property in the center of the Borough.</p>
+
+        <p>In 1994 the most recent major work was the complete refurbishing and rearrangement of the worship space as well as the installation of the beautiful stained-glass windows, which are the pride of the congregation.</p>
+      </div>
+    </section>
+
+    <!-- ========== 8. OUR FACILITIES — PHOTO-BACKED CARDS ========== -->
+    <div class="section-header">
+      <h2>Our Facilities</h2>
+    </div>
+
+    <section class="facilities-section" id="facilities">
+      <div class="facilities-intro reveal">
+        <p>The Community Church of Glen Rock is conveniently located to public transportation and situated on quiet, spacious grounds.</p>
+        <p>We welcome the use of our beautiful campus by interested parties in the extended community. Contact Kris Roy, Property Manager for more information.</p>
+      </div>
+
+      <div class="facilities-cards-grid reveal-stagger">
+
+        <div class="facility-card-photo">
+          <img src="images/fellowship-hall.jpg" alt="Fellowship Hall" loading="lazy">
+          <div class="card-content">
+            <h3>Fellowship Hall</h3>
+            <p>A 35 x 60 foot space ideal for lectures, conferences, receptions and events.</p>
+          </div>
+        </div>
+
+        <div class="facility-card-photo">
+          <img src="images/room1.jpg" alt="Education building meeting room" loading="lazy">
+          <div class="card-content">
+            <h3>Education Building</h3>
+            <p>Two intimate adjoining spaces measuring 24 x 36 feet each, perfect for smaller gatherings.</p>
+          </div>
+        </div>
+
+        <div class="facility-card-photo">
+          <img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy">
+          <div class="card-content">
+            <h3>Sanctuary</h3>
+            <p>Our gorgeous sanctuary with excellent acoustics is available to rent for weddings and concerts.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== 9. MEMBERSHIP ========== -->
+    <div class="section-header">
+      <h2>Membership</h2>
+    </div>
+
+    <section class="membership-section" id="membership">
+      <div class="membership-content reveal">
+        <p>There are two avenues to membership in the Community Church of Glen Rock. If you are a member of another Christian church, we receive you by letter of transfer. If you are becoming a first time church member, you make a profession of faith. You can begin your journey to becoming a member by contacting one of the pastors.</p>
+        <p>The Board of Elders receives all new members who are welcomed at a service of public worship.</p>
+        <p>Community Church holds regular orientation sessions for all who desire membership. These gatherings are intended to welcome new people by describing the life and ministry of this Christian community.</p>
+      </div>
+    </section>
+
+    <!-- ========== 10. GALLERY STRIP ========== -->
+    <div class="photo-strip">
+      <div class="photo-strip-item"><img src="images/christmas-eve.jpg" alt="Christmas Eve candlelight service" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/communion.jpg" alt="Communion Sunday" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/luncheon.jpg" alt="Community luncheon gathering" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/palm-sunday.jpg" alt="Palm Sunday celebration" loading="lazy"></div>
+    </div>
+
+    <!-- ========== 11. GOLD CTA BAR ========== -->
+    <section class="cta-bar reveal">
+      <h2>We are available for Special Occasions</h2>
+      <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>354 Rock Road, Glen Rock, NJ 07452</p>
+        <p>
+          <a href="mailto:info@communitychurchgr.com">info@communitychurchgr.com</a>
+        </p>
+        <p>
+          <a href="tel:+12014444625">(201) 444-4625</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#leadership">Leadership Team</a></li>
+          <li><a href="worship.html">Worship</a></li>
+          <li><a href="programs.html">Programs &amp; Ministries</a></li>
+          <li><a href="worship.html#special-occasions">Special Occasions</a></li>
+          <li><a href="blog/">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5!2d-74.1299!3d40.9601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s354+Rock+Road%2C+Glen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1"
+          width="100%" height="190" style="border:0;border-radius:4px;"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Community Church of Glen Rock">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <a href="https://livewebstudios.com" target="_blank" rel="noopener">
+        <img src="images/verifiedsecured.png"
+             alt="Verified and Secured by Live Web Studios"
+             width="110" height="auto">
+      </a>
+      <p>&copy; 2025 LIVEWEBSTUDIOS.COM &mdash; POWERED BY LIVE WEB STUDIOS</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="cms-loader.js"></script>
+
+</body>
+</html>

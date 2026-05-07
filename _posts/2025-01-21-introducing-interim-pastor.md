@@ -1,0 +1,11 @@
+---
+title: "Introducing Our Interim Pastor"
+date: 2025-01-21
+author: "Community Church of Glen Rock"
+excerpt: "I'm Rev. Mark William Ennis. God called me to ministry when I was four years old."
+image: ""
+---
+
+God called me to ministry when I was four years old, and I have been an ordained minister in the Reformed Church in America for the past forty years. I have ministered in parish settings as I've nurtured counselled, preached, and prayed with people of all ages, backgrounds, and experiences. I developed a love for storytelling as a volunteer chaplain at a Christian summer camp. Currently, I am an interim pastor and hospice chaplain.
+
+I am a preacher, teacher, weekly blogger and podcaster, as well as the author of two books, about people who are healing spiritually, with a third in process. I can help you on your journey toward spiritual growth or healing. Contact me if you would like my assistance and please hear my podcasts and read my blogs. I hope that they will bless you.

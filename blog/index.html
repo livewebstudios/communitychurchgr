@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Community Church of Glen Rock | Glen Rock, NJ</title>
+  <meta name="description" content="Read the latest news, reflections, and updates from Community Church of Glen Rock.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog — Community Church of Glen Rock | Glen Rock, NJ">
+  <meta property="og:description" content="Read the latest news, reflections, and updates from Community Church of Glen Rock.">
+  <meta property="og:image" content="https://communitychurchgr.com/images/hero-about.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://communitychurchgr.com/blog/">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://communitychurchgr.com/blog/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* ---- BLOG CARD WITH FEATURED IMAGE ---- */
+    .blog-grid-visual {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .blog-card-visual {
+      background: var(--white, #fff);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-visual:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+    .blog-card-img {
+      overflow: hidden;
+      height: 200px;
+      position: relative;
+    }
+    .blog-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .blog-card-visual:hover .blog-card-img img {
+      transform: scale(1.06);
+    }
+    .blog-card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.08) 100%);
+    }
+    .blog-card-content {
+      padding: 1.75rem 1.5rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-content .date {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .blog-card-content h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .blog-card-content p {
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--charcoal-lt, #6b6b6b);
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+    .blog-card-content .read-more {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .blog-card-content .read-more:hover {
+      color: var(--gold);
+    }
+
+    /* ---- PHOTO STRIP ---- */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      overflow: hidden;
+    }
+    .photo-strip-item {
+      overflow: hidden;
+      height: 260px;
+      position: relative;
+    }
+    .photo-strip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .photo-strip-item:hover img {
+      transform: scale(1.08);
+    }
+    .photo-strip-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(74,67,64,0.15);
+      transition: background 0.4s ease;
+    }
+    .photo-strip-item:hover::after {
+      background: rgba(74,67,64,0);
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 768px) {
+      .blog-grid-visual {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem 3rem;
+      }
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 180px 180px;
+      }
+    }
+  </style>
+</head>
+
+<body data-content="blog">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========== UTILITY BAR ========== -->
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <a href="tel:+12014444625">CALL: 201.444.4625</a>
+      <a href="#">EVENT CALENDAR</a>
+      <a href="../about.html#membership">MEMBERSHIP</a>
+      <a href="#">SUPPORT US</a>
+    </div>
+  </div>
+
+  <!-- ========== MAIN NAV ========== -->
+  <header class="site-header" id="site-header">
+    <nav class="site-nav">
+
+      <a href="../index.html" class="nav-brand">
+        <img src="../images/logo.png"
+             alt="Community Church of Glen Rock"
+             width="220" height="auto">
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="../about.html" class="nav-link">
+            About <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="../about.html#history">Our Story &amp; History</a></li>
+            <li><a href="../about.html#minister">Our Minister</a></li>
+            <li><a href="../about.html#leadership">Leadership Team</a></li>
+            <li><a href="../about.html#consistory">Consistory</a></li>
+            <li><a href="../about.html#membership">Membership</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="../worship.html" class="nav-link">
+            Worship <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="../worship.html#services">Sunday Services</a></li>
+            <li><a href="../worship.html#livestream">Live Stream</a></li>
+            <li><a href="../worship.html#special-occasions">Special Occasions</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="../programs.html" class="nav-link">
+            Programs &amp; Ministries <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="../programs.html#all">All Programs</a></li>
+            <li><a href="../programs.html#outreach">Outreach</a></li>
+            <li><a href="../programs.html#thrift-shop">Thrift Shop</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="../blog/" class="nav-link active">Blog</a>
+        </li>
+
+        <li>
+          <a href="../contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== 1. HERO ========== -->
+    <section class="hero hero-short">
+      <div class="hero-bg">
+        <img src="../images/hero-about.jpg"
+             alt="Community Church of Glen Rock">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Blog</h1>
+      </div>
+    </section>
+
+    <!-- ========== 2. BLOG GRID — VISUAL CARDS ========== -->
+    <section style="background:var(--cream-dk, #f0ebe3);">
+      <div class="section-header">
+        <h2>Latest from Our Community</h2>
+      </div>
+
+      <div class="blog-grid-visual reveal-stagger">
+
+        <div class="blog-card-visual">
+          <div class="blog-card-img">
+            <img src="../images/craft-day.jpg" alt="Community Thrift Shop" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <span class="date">June 25, 2025</span>
+            <h3>Community Thrift Shop</h3>
+            <p>Please consider donating your pre-loved items to the Community Thrift Shop in Midland Park.</p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card-visual">
+          <div class="blog-card-img">
+            <img src="../images/bible-study.jpg" alt="Bible study group" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <span class="date">June 24, 2025</span>
+            <h3>Bible Study</h3>
+            <p>Bible Study on Wednesday Nights via Zoom at 8 pm. Open to all ages.</p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card-visual">
+          <div class="blog-card-img">
+            <img src="../images/communion.jpg" alt="Communion Sunday sacrament" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <span class="date">June 24, 2025</span>
+            <h3>Communion Sundays</h3>
+            <p>The first Sunday of each month we receive the Sacrament of Holy Communion.</p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card-visual">
+          <div class="blog-card-img">
+            <img src="../images/grace.jpg" alt="Healing Sunday prayers" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <span class="date">June 24, 2025</span>
+            <h3>Healing Sundays</h3>
+            <p>Healing Sunday is every 3rd Sunday of each month at our 10am service.</p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card-visual">
+          <div class="blog-card-img">
+            <img src="../images/prayer.jpg" alt="Prayer and pastoral care" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <span class="date">June 24, 2025</span>
+            <h3>Prayer Requests &amp; Pastoral Visits</h3>
+            <p>If you or a family member are hospitalized, please call the office to arrange a pastoral visit.</p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card-visual">
+          <div class="blog-card-img">
+            <img src="../images/palm-sunday.jpg" alt="Lenten season celebration" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <span class="date">March 7, 2025</span>
+            <h3>Lenten Events</h3>
+            <p>Pot-Luck Lunches and Exploring Fruit and Gifts of the Spirit series.</p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card-visual">
+          <div class="blog-card-img">
+            <img src="../images/pastor-ennis.jpg" alt="Rev. Mark William Ennis" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <span class="date">January 21, 2025</span>
+            <h3>Introducing Our Interim Pastor</h3>
+            <p>I'm Rev. Mark William Ennis. God called me to ministry when I was four years old.</p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card-visual">
+          <div class="blog-card-img">
+            <img src="../images/interior.jpg" alt="Church sanctuary for reflection" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <span class="date">June 27, 2021</span>
+            <h3>A Reflection on a Year of Service</h3>
+            <p>This year I have had the honor of recording the church services and streaming them online.</p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== 3. PHOTO STRIP ========== -->
+    <div class="photo-strip">
+      <div class="photo-strip-item"><img src="../images/congregation.jpg" alt="Congregation gathered for worship" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="../images/fellowship.jpg" alt="Fellowship and conversation" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="../images/choir.jpg" alt="Church choir performing" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="../images/luncheon.jpg" alt="Community luncheon gathering" loading="lazy"></div>
+    </div>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>354 Rock Road, Glen Rock, NJ 07452</p>
+        <p>
+          <a href="mailto:info@communitychurchgr.com">info@communitychurchgr.com</a>
+        </p>
+        <p>
+          <a href="tel:+12014444625">(201) 444-4625</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../about.html#leadership">Leadership Team</a></li>
+          <li><a href="../worship.html">Worship</a></li>
+          <li><a href="../programs.html">Programs &amp; Ministries</a></li>
+          <li><a href="../worship.html#special-occasions">Special Occasions</a></li>
+          <li><a href="../blog/">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5!2d-74.1299!3d40.9601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s354+Rock+Road%2C+Glen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1"
+          width="100%" height="190" style="border:0;border-radius:4px;"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Community Church of Glen Rock">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <a href="https://livewebstudios.com" target="_blank" rel="noopener">
+        <img src="../images/verifiedsecured.png"
+             alt="Verified and Secured by Live Web Studios"
+             width="110" height="auto">
+      </a>
+      <p>&copy; 2025 LIVEWEBSTUDIOS.COM &mdash; POWERED BY LIVE WEB STUDIOS</p>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../cms-loader.js"></script>
+
+</body>
+</html>

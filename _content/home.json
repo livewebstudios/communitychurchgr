@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "headline": "Welcome to Community Church of Glen Rock",
+    "subhead": "Experience the warmth of fellowship, the power of faith, and the joy of community.",
+    "cta1_label": "Our Facility",
+    "cta1_url": "/about",
+    "cta2_label": "Events",
+    "cta2_url": "/programs"
+  },
+  "ministry_cards": [
+    { "title": "Worship",    "description": "At Community Church of Glen Rock, worship is a sacred gathering where hearts unite in praise, reflection, and spiritual growth." },
+    { "title": "Ministry",   "description": "Ministry is the embodiment of compassion and service, nurturing lives and fostering a sense of belonging within our diverse congregation." },
+    { "title": "Membership", "description": "Membership is more than a commitment. It's an invitation to join a supportive community, grow in faith, and make a difference together." }
+  ],
+  "pastor": {
+    "name": "Rev. Mark William Ennis",
+    "bio": "God called me to ministry when I was four years old, and I have been an ordained minister in the Reformed Church in America for the past forty years. I am a preacher, teacher, weekly blogger and podcaster, as well as the author of two books about people who are healing spiritually, with a third in process.",
+    "livestream_cta": "View our LIVE stream here each Sunday at 10:00am",
+    "livestream_url": "#"
+  },
+  "mission": {
+    "headline": "Our Mission",
+    "subheadline": "A Vibrant and Inclusive Spiritual Community",
+    "body": "Here individuals from all walks of life can find acceptance, support, and opportunities for personal and collective growth. Rooted in the teachings of Jesus Christ, we strive to embody love, compassion, and justice in our interactions with one another and the world around us."
+  },
+  "membership_support": {
+    "membership_headline": "Membership",
+    "membership_description": "Experience the warmth of our community and the richness of spiritual growth — join us today!",
+    "membership_cta": "Join Us",
+    "support_headline": "Support Us",
+    "support_description": "Make a meaningful impact in our community and help us spread love, compassion, and hope — support us today!",
+    "support_cta": "Donate",
+    "donation_url": "#"
+  }
+}

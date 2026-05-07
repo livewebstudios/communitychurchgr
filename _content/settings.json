@@ -1,0 +1,16 @@
+{
+  "site_name": "Community Church of Glen Rock",
+  "tagline": "Where Faith Finds Family",
+  "phone": "(201) 444-4625",
+  "email": "info@communitychurchgr.com",
+  "address": "354 Rock Road, Glen Rock, NJ 07452",
+  "facebook": "",
+  "youtube": "",
+  "nav": [
+    { "label": "Home",                 "url": "/" },
+    { "label": "About",                "url": "/about" },
+    { "label": "Worship",              "url": "/worship" },
+    { "label": "Programs & Ministries","url": "/programs" },
+    { "label": "Contact",              "url": "/contact" }
+  ]
+}

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Community Church of Glen Rock | Glen Rock, NJ</title>
+  <meta name="description" content="Get in touch with Community Church of Glen Rock. Visit us at 354 Rock Road, Glen Rock, NJ 07452 or call (201) 444-4625.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact — Community Church of Glen Rock | Glen Rock, NJ">
+  <meta property="og:description" content="Get in touch with Community Church of Glen Rock. Visit us at 354 Rock Road, Glen Rock, NJ 07452 or call (201) 444-4625.">
+  <meta property="og:image" content="https://communitychurchgr.com/images/hero-about.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://communitychurchgr.com/contact.html">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://communitychurchgr.com/contact.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* ---- CONTACT INFO 2-COL: PHOTO + DETAILS ---- */
+    .contact-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .contact-split-photo {
+      overflow: hidden;
+      position: relative;
+      min-height: 400px;
+    }
+    .contact-split-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .contact-split-photo:hover img {
+      transform: scale(1.04);
+    }
+    .contact-split-details {
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 3rem;
+    }
+    .contact-split-inner {
+      max-width: 400px;
+    }
+    .contact-split-inner h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--charcoal);
+      margin-bottom: 2rem;
+    }
+    .contact-detail-row {
+      margin-bottom: 1.5rem;
+    }
+    .contact-detail-row h3 {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.35rem;
+    }
+    .contact-detail-row p {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .contact-detail-row a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+    .contact-detail-row a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---- FORM WITH PHOTO BG ---- */
+    .contact-form-photo {
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 2rem;
+    }
+    .contact-form-photo .form-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .contact-form-photo .form-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .contact-form-photo .form-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(247,241,230,0.92);
+    }
+    .contact-form-photo .form-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Map section */
+    .map-section {
+      width: 100%;
+      line-height: 0;
+    }
+    .map-section iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+
+    /* ---- SPECIAL OCCASIONS WITH PHOTO BG ---- */
+    .special-occasions-photo {
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .special-occasions-photo .occasions-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .special-occasions-photo .occasions-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .special-occasions-photo .occasions-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(78,138,138,0.85);
+    }
+    .special-occasions-photo .occasions-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .special-occasions-photo h2 {
+      font-family: var(--font-serif);
+      color: var(--white);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .special-occasions-photo .btn-outline {
+      border-color: var(--white);
+      color: var(--white);
+    }
+    .special-occasions-photo .btn-outline:hover {
+      background: var(--white);
+      color: var(--teal);
+    }
+
+    /* ---- MEMBERSHIP WITH PHOTO BG ---- */
+    .membership-photo {
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 2rem;
+    }
+    .membership-photo .membership-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .membership-photo .membership-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .membership-photo .membership-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(247,241,230,0.90);
+    }
+    .membership-photo .membership-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .membership-photo p {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+
+    /* ---- DONATE WITH PHOTO BG ---- */
+    .donate-photo {
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .donate-photo .donate-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .donate-photo .donate-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .donate-photo .donate-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(247,241,230,0.88);
+    }
+    .donate-photo .donate-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .donate-photo p {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--dark);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- PHOTO STRIP ---- */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      overflow: hidden;
+    }
+    .photo-strip-item {
+      overflow: hidden;
+      height: 260px;
+      position: relative;
+    }
+    .photo-strip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .photo-strip-item:hover img {
+      transform: scale(1.08);
+    }
+    .photo-strip-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(74,67,64,0.15);
+      transition: background 0.4s ease;
+    }
+    .photo-strip-item:hover::after {
+      background: rgba(74,67,64,0);
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 768px) {
+      .contact-split { grid-template-columns: 1fr; }
+      .contact-split-photo { min-height: 280px; }
+      .contact-split-details { padding: 3rem 2rem; }
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 180px 180px;
+      }
+    }
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Community Church of Glen Rock",
+    "url": "https://communitychurchgr.com",
+    "telephone": "+1-201-444-4625",
+    "email": "info@communitychurchgr.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "354 Rock Road",
+      "addressLocality": "Glen Rock",
+      "addressRegion": "NJ",
+      "postalCode": "07452",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.9601,
+      "longitude": -74.1299
+    },
+    "openingHours": "Su 10:00-11:00",
+    "sameAs": []
+  }
+  </script>
+</head>
+
+<body data-content="contact">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========== UTILITY BAR ========== -->
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <a href="tel:+12014444625">CALL: 201.444.4625</a>
+      <a href="#">EVENT CALENDAR</a>
+      <a href="about.html#membership">MEMBERSHIP</a>
+      <a href="#">SUPPORT US</a>
+    </div>
+  </div>
+
+  <!-- ========== MAIN NAV ========== -->
+  <header class="site-header" id="site-header">
+    <nav class="site-nav">
+
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png"
+             alt="Community Church of Glen Rock"
+             width="220" height="auto">
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="about.html" class="nav-link">
+            About <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="about.html#history">Our Story &amp; History</a></li>
+            <li><a href="about.html#minister">Our Minister</a></li>
+            <li><a href="about.html#leadership">Leadership Team</a></li>
+            <li><a href="about.html#consistory">Consistory</a></li>
+            <li><a href="about.html#membership">Membership</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="worship.html" class="nav-link">
+            Worship <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="worship.html#services">Sunday Services</a></li>
+            <li><a href="worship.html#livestream">Live Stream</a></li>
+            <li><a href="worship.html#special-occasions">Special Occasions</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="programs.html" class="nav-link">
+            Programs &amp; Ministries <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="programs.html#all">All Programs</a></li>
+            <li><a href="programs.html#outreach">Outreach</a></li>
+            <li><a href="programs.html#thrift-shop">Thrift Shop</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="blog/" class="nav-link">Blog</a>
+        </li>
+
+        <li>
+          <a href="contact.html" class="nav-link active">Contact</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== 1. HERO ========== -->
+    <section class="hero hero-short">
+      <div class="hero-bg">
+        <img src="images/hero-about.jpg"
+             alt="Community Church of Glen Rock">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Contact Us</h1>
+      </div>
+    </section>
+
+    <!-- ========== 2. CONTACT INFO — PHOTO + DETAILS ========== -->
+    <section class="contact-split reveal">
+      <div class="contact-split-photo">
+        <img src="images/front.jpg" alt="Community Church of Glen Rock front entrance" loading="lazy">
+      </div>
+      <div class="contact-split-details">
+        <div class="contact-split-inner">
+          <h2>Get in Touch</h2>
+
+          <div class="contact-detail-row">
+            <h3>Address</h3>
+            <p>354 Rock Road<br>Glen Rock, NJ 07452</p>
+          </div>
+
+          <div class="contact-detail-row">
+            <h3>Email</h3>
+            <p><a href="mailto:info@communitychurchgr.com">info@communitychurchgr.com</a></p>
+          </div>
+
+          <div class="contact-detail-row">
+            <h3>Phone</h3>
+            <p><a href="tel:+12014444625">(201) 444-4625</a></p>
+          </div>
+
+          <div class="contact-detail-row">
+            <h3>Fax</h3>
+            <p>(201) 444-4633</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. CONTACT FORM — PHOTO BG ========== -->
+    <section class="contact-form-photo">
+      <div class="form-bg">
+        <img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy">
+      </div>
+      <div class="form-overlay"></div>
+      <div class="form-inner">
+        <div class="section-header">
+          <h2>Send Us a Message</h2>
+        </div>
+        <form class="contact-form reveal" action="https://formspree.io/f/mpqkryvn" method="POST">
+          <!-- Formspree redirect: absolute URL required. If the site is served under a subpath (e.g. /newsite/), set value to https://communitychurchgr.com/newsite/thank-you.html -->
+          <input type="hidden" name="_next" value="https://communitychurchgr.com/thank-you.html">
+
+          <div class="form-group">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="How can we help?">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required placeholder="Your message..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gold">Send Message</button>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== 4. MAP ========== -->
+    <section class="map-section reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5!2d-74.1299!3d40.9601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s354+Rock+Road%2C+Glen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1"
+        allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map to Community Church of Glen Rock">
+      </iframe>
+    </section>
+
+    <!-- ========== 5. SPECIAL OCCASIONS — PHOTO BG ========== -->
+    <section class="special-occasions-photo reveal">
+      <div class="occasions-bg">
+        <img src="images/wedding-rings.jpg" alt="Wedding rings for special occasions" loading="lazy">
+      </div>
+      <div class="occasions-overlay"></div>
+      <div class="occasions-inner">
+        <h2>We are Available for Special Occasions &mdash; Weddings, Concerts, Receptions</h2>
+        <a href="worship.html#special-occasions" class="btn btn-outline">Learn More</a>
+      </div>
+    </section>
+
+    <!-- ========== 6. MEMBERSHIP — PHOTO BG ========== -->
+    <section class="membership-photo reveal" id="membership">
+      <div class="membership-bg">
+        <img src="images/contemporary-service.jpg" alt="Church community gathering" loading="lazy">
+      </div>
+      <div class="membership-overlay"></div>
+      <div class="membership-inner">
+        <div class="section-header">
+          <h2>Membership</h2>
+        </div>
+        <p>There are three avenues to membership in the Community Church of Glen Rock:</p>
+        <p>If you are a member of another Christian Church, we receive you by letter of transfer.</p>
+        <p>If you are becoming a first time Church member, you make a profession of faith.</p>
+        <p>If any prior membership has long since lapsed, we can receive you by reaffirmation of faith.</p>
+        <p>The Board of Elders receives all new members who are welcomed at a service of public worship. You can begin your journey to becoming a member by contacting our pastor.</p>
+      </div>
+    </section>
+
+    <!-- ========== 7. DONATE — PHOTO BG ========== -->
+    <section class="donate-photo reveal">
+      <div class="donate-bg">
+        <img src="images/give.jpg" alt="Hands giving generously" loading="lazy">
+      </div>
+      <div class="donate-overlay"></div>
+      <div class="donate-inner">
+        <div class="section-header">
+          <h2>Support Our Church</h2>
+        </div>
+        <p>If you find it in your heart and financially feasible to donate to our church we greatly appreciate the support in order to keep our doors open and help the community.</p>
+        <a href="#" class="btn btn-gold">Give Today</a>
+      </div>
+    </section>
+
+    <!-- ========== 8. PHOTO STRIP ========== -->
+    <div class="photo-strip">
+      <div class="photo-strip-item"><img src="images/christmas-eve.jpg" alt="Christmas Eve candlelight service" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/baptism.jpg" alt="Baptism ceremony" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/handbells.jpg" alt="Handbell choir performance" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/memorial-garden.jpg" alt="Memorial garden" loading="lazy"></div>
+    </div>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p data-cms="footer-address">354 Rock Road, Glen Rock, NJ 07452</p>
+        <p>
+          <a href="mailto:info@communitychurchgr.com"
+             data-cms="footer-email">info@communitychurchgr.com</a>
+        </p>
+        <p>
+          <a href="tel:+12014444625"
+             data-cms="footer-phone">(201) 444-4625</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#leadership">Leadership Team</a></li>
+          <li><a href="worship.html">Worship</a></li>
+          <li><a href="programs.html">Programs &amp; Ministries</a></li>
+          <li><a href="worship.html#special-occasions">Special Occasions</a></li>
+          <li><a href="blog/">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5!2d-74.1299!3d40.9601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s354+Rock+Road%2C+Glen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1"
+          width="100%" height="190" style="border:0;border-radius:4px;"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Community Church of Glen Rock">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <a href="https://livewebstudios.com" target="_blank" rel="noopener">
+        <img src="images/verifiedsecured.png"
+             alt="Verified and Secured by Live Web Studios"
+             width="110" height="auto">
+      </a>
+      <p>&copy; 2025 LIVEWEBSTUDIOS.COM &mdash; POWERED BY LIVE WEB STUDIOS</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="cms-loader.js"></script>
+
+</body>
+</html>
