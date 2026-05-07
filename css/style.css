@@ -680,14 +680,14 @@ p {
   position: absolute;
   inset: 0;
   z-index: 0;
+  background-color: var(--charcoal);
 }
 
 .hero-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: scale(1.05);
-  animation: heroZoom 20s ease-in-out infinite alternate;
+  object-fit: contain;
+  object-position: center;
 }
 
 .hero-short {
@@ -1816,7 +1816,30 @@ p {
   }
 
   .hero {
-    min-height: 70vh;
+    min-height: 0 !important;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+  .hero-bg {
+    position: relative;
+    inset: auto;
+    background-color: transparent;
+  }
+  .hero-bg img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .hero-overlay {
+    display: none;
+  }
+  .hero-content {
+    position: relative;
+    background-color: var(--charcoal);
+    padding: 2.25rem 1.5rem 2.75rem;
+    max-width: none;
+    width: 100%;
   }
   .hero-content h1 {
     font-size: clamp(2rem, 8vw, 2.8rem);
