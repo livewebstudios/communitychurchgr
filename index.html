@@ -450,6 +450,243 @@
       .gallery-item--tall { grid-row: span 1; }
       .minister-accent-photo { display: none; }
     }
+
+    /* ============================================
+       WELCOME POPUP — Events / Links Modal
+       ============================================ */
+    .ccgr-popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 18, 16, 0.72);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    .ccgr-popup-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .ccgr-popup {
+      position: relative;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      width: 100%;
+      max-width: 880px;
+      background: var(--cream);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.4) inset,
+        0 40px 90px rgba(0, 0, 0, 0.55),
+        0 18px 40px rgba(0, 0, 0, 0.32);
+      overflow: hidden;
+      transform: translateY(18px) scale(0.98);
+      transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .ccgr-popup-overlay.is-open .ccgr-popup {
+      transform: translateY(0) scale(1);
+    }
+    .ccgr-popup__photo {
+      position: relative;
+      min-height: 420px;
+      background: var(--charcoal);
+      overflow: hidden;
+    }
+    .ccgr-popup__photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+    .ccgr-popup__photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(58, 107, 107, 0.0) 0%,
+        rgba(58, 107, 107, 0.15) 60%,
+        rgba(58, 107, 107, 0.35) 100%
+      );
+    }
+    .ccgr-popup__content {
+      padding: 2.5rem 2.4rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .ccgr-popup__logo {
+      width: 165px;
+      height: auto;
+      margin-bottom: 1.1rem;
+    }
+    .ccgr-popup__label {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.55rem;
+    }
+    .ccgr-popup__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.55rem, 2.4vw, 1.85rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.15;
+      margin-bottom: 1.4rem;
+    }
+    .ccgr-popup__links {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .ccgr-popup__link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.7rem 1rem;
+      background: var(--white);
+      border: 1px solid rgba(74, 67, 64, 0.12);
+      color: var(--charcoal);
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-align: left;
+      text-decoration: none;
+      transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+    .ccgr-popup__link:hover {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: var(--white);
+      transform: translateX(2px);
+    }
+    .ccgr-popup__link:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring-dark, 0 0 0 3px rgba(212, 160, 48, 0.5));
+    }
+    .ccgr-popup__link-when {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal-dk);
+      display: block;
+      margin-bottom: 0.18em;
+      transition: color 0.25s ease;
+    }
+    .ccgr-popup__link:hover .ccgr-popup__link-when {
+      color: var(--gold-lt);
+    }
+    .ccgr-popup__link-title {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.25;
+    }
+    .ccgr-popup__link-arrow {
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      color: var(--gold);
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+    .ccgr-popup__link:hover .ccgr-popup__link-arrow {
+      color: var(--white);
+      transform: translateX(3px);
+    }
+    .ccgr-popup__dismiss {
+      background: none;
+      border: none;
+      padding: 0.4em 0.6em;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--charcoal-lt);
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+    .ccgr-popup__dismiss:hover {
+      color: var(--charcoal);
+      border-bottom-color: var(--charcoal);
+    }
+    .ccgr-popup__close {
+      position: absolute;
+      top: 0.85rem;
+      right: 0.85rem;
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--charcoal);
+      font-size: 1.05rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+      transition: background 0.25s ease, transform 0.25s ease, color 0.25s ease;
+      z-index: 2;
+    }
+    .ccgr-popup__close:hover {
+      background: var(--charcoal);
+      color: var(--white);
+      transform: rotate(90deg);
+    }
+    .ccgr-popup__close:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(212, 160, 48, 0.6);
+    }
+    @media (max-width: 720px) {
+      .ccgr-popup-overlay { padding: 0.75rem; align-items: flex-start; padding-top: 4vh; }
+      .ccgr-popup {
+        grid-template-columns: 1fr;
+        max-height: 92vh;
+        overflow-y: auto;
+      }
+      .ccgr-popup__photo {
+        min-height: 180px;
+      }
+      .ccgr-popup__photo img { object-position: center 40%; }
+      .ccgr-popup__content { padding: 1.85rem 1.4rem 1.6rem; }
+      .ccgr-popup__logo { width: 140px; }
+      .ccgr-popup__heading { margin-bottom: 1.1rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ccgr-popup-overlay,
+      .ccgr-popup,
+      .ccgr-popup__link,
+      .ccgr-popup__link-arrow,
+      .ccgr-popup__close {
+        transition: none;
+      }
+      .ccgr-popup-overlay.is-open .ccgr-popup { transform: none; }
+    }
   </style>
 
   <!-- Schema -->
@@ -782,8 +1019,132 @@
     </div>
   </footer>
 
+  <!-- ========== WELCOME POPUP ========== -->
+  <div class="ccgr-popup-overlay" id="ccgrPopup" role="dialog" aria-modal="true" aria-labelledby="ccgrPopupHeading" hidden>
+    <div class="ccgr-popup">
+      <button class="ccgr-popup__close" type="button" aria-label="Close welcome message" data-ccgr-popup-close>&times;</button>
+      <div class="ccgr-popup__photo" aria-hidden="true">
+        <img src="images/congregation.jpg" alt="">
+      </div>
+      <div class="ccgr-popup__content">
+        <img src="images/logo.png" alt="Community Church of Glen Rock" class="ccgr-popup__logo">
+        <span class="ccgr-popup__label">Welcome</span>
+        <h2 class="ccgr-popup__heading" id="ccgrPopupHeading">Join us, in person &amp; online</h2>
+        <ul class="ccgr-popup__links">
+          <li>
+            <a href="#" class="ccgr-popup__link" target="_blank" rel="noopener" data-ccgr-link="sunday-livestream">
+              <span>
+                <span class="ccgr-popup__link-when">Sunday 10 AM</span>
+                <span class="ccgr-popup__link-title">Live Stream</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="ccgr-popup__link" target="_blank" rel="noopener" data-ccgr-link="sunday-5pm-zoom">
+              <span>
+                <span class="ccgr-popup__link-when">Sunday 5 PM</span>
+                <span class="ccgr-popup__link-title">Zoom Gathering</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="ccgr-popup__link" target="_blank" rel="noopener" data-ccgr-link="wednesday-bible-study">
+              <span>
+                <span class="ccgr-popup__link-when">Wednesday 8 PM</span>
+                <span class="ccgr-popup__link-title">Bible Study on Zoom</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="ccgr-popup__link" target="_blank" rel="noopener" data-ccgr-link="email-list">
+              <span>
+                <span class="ccgr-popup__link-when">Stay Connected</span>
+                <span class="ccgr-popup__link-title">Join Our Email List</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="ccgr-popup__link" data-ccgr-link="prayer-request">
+              <span>
+                <span class="ccgr-popup__link-when">We're Here</span>
+                <span class="ccgr-popup__link-title">Submit a Prayer Request</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="ccgr-popup__link" target="_blank" rel="noopener" data-ccgr-link="fall-bible-study-book">
+              <span>
+                <span class="ccgr-popup__link-when">Fall Sunday AM Bible Study</span>
+                <span class="ccgr-popup__link-title">Book Link</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+        </ul>
+        <button type="button" class="ccgr-popup__dismiss" data-ccgr-popup-close>No thanks</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/nav.js"></script>
   <script src="cms-loader.js"></script>
+  <script>
+    (function () {
+      var popup = document.getElementById('ccgrPopup');
+      if (!popup) return;
+      var STORAGE_KEY = 'ccgrWelcomePopupDismissed';
+      var lastFocused = null;
+
+      function dismissed() {
+        try { return sessionStorage.getItem(STORAGE_KEY) === '1'; }
+        catch (e) { return false; }
+      }
+      function markDismissed() {
+        try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+      }
+      function openPopup() {
+        if (dismissed()) return;
+        lastFocused = document.activeElement;
+        popup.hidden = false;
+        // force reflow so the transition runs
+        void popup.offsetWidth;
+        popup.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        var firstClose = popup.querySelector('[data-ccgr-popup-close]');
+        if (firstClose) firstClose.focus({ preventScroll: true });
+      }
+      function closePopup() {
+        popup.classList.remove('is-open');
+        document.body.style.overflow = '';
+        markDismissed();
+        setTimeout(function () {
+          popup.hidden = true;
+          if (lastFocused && typeof lastFocused.focus === 'function') {
+            lastFocused.focus({ preventScroll: true });
+          }
+        }, 380);
+      }
+
+      popup.addEventListener('click', function (e) {
+        if (e.target === popup || e.target.closest('[data-ccgr-popup-close]')) {
+          closePopup();
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && popup.classList.contains('is-open')) closePopup();
+      });
+
+      // open after a short delay so the hero loads first
+      if (!dismissed()) {
+        window.setTimeout(openPopup, 1200);
+      }
+    })();
+  </script>
 
 </body>
 </html>
