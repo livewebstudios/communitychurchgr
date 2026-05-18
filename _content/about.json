@@ -1,0 +1,36 @@
+{
+  "consistory": {
+    "intro": [
+      "RCA churches are governed by a Consistory composed of elders and deacons, elected by the congregation, and ordained into their offices. They are responsible for all aspects of the life of our congregation.",
+      "Elders have as their primary task the spiritual health of the congregation. Together as the Board of Elders they handle all matters concerning membership, including receiving new members and approving requests for baptism.",
+      "Deacons care for the material well-being of members of the church and the community. They have primary responsibility for the mission of the congregation as well as the congregation's physical properties.",
+      "The Community Church of Glen Rock has seven elders and seven deacons who serve on the consistory. Each is elected to a three-year term and can be re-elected to one further term."
+    ],
+    "members": [
+      { "name": "Keith Stewart",      "role": "Deacon" },
+      { "name": "John Van Keuren",    "role": "Elder"  },
+      { "name": "Gail Sternitzke",    "role": "Elder"  },
+      { "name": "Laura Bird",         "role": "Deacon" },
+      { "name": "Jessica Fry",        "role": "Deacon" },
+      { "name": "Stephanie Beaudoin", "role": "Deacon" },
+      { "name": "Betty Vella",        "role": "Elder"  },
+      { "name": "Leslie Botz",        "role": "Deacon" }
+    ]
+  },
+  "history": {
+    "paragraphs": [
+      "The Community Church of Glen Rock began life with 20 members as the Reformed Church of Glen Rock in 1895. Meetings were first held in homes and then in the 'Red Schoolhouse,' which still stands at the corner of Rock Road and Ackerman Avenue. The Reverend John A. Van Neste preached there as well as in his own church in Ridgewood. In 1896 a small church was built, known as the 'little White Church.'",
+      "In 1920 our name was changed to The Community Church of Glen Rock, signaling that the church intended to be a church of and for the local community. By 1924 the church had outgrown its first building and erected its second building, the 'Stucco Church,' on the same site. The original building was used for education and remained in use into the 1950s.",
+      "Following the end of World War II the population of Glen Rock more than doubled as land was cleared, homes were built, schools were built or added onto, and our church again faced the need for expansion. In 1950 the Church began excavation for a new Sanctuary to be attached to the rear of the Stucco Church.",
+      "In 1958 the Education Building was constructed. In 1965 following several property acquisitions the large Fellowship Hall was built and the Stucco Church was demolished to make way for a new entrance to the sanctuary. Along with expanded parking the campus occupies a large piece of property in the center of the Borough.",
+      "In 1994 the most recent major work was the complete refurbishing and rearrangement of the worship space as well as the installation of the beautiful stained-glass windows, which are the pride of the congregation."
+    ]
+  },
+  "membership": {
+    "paragraphs": [
+      "There are two avenues to membership in the Community Church of Glen Rock. If you are a member of another Christian church, we receive you by letter of transfer. If you are becoming a first time church member, you make a profession of faith. You can begin your journey to becoming a member by contacting one of the pastors.",
+      "The Board of Elders receives all new members who are welcomed at a service of public worship.",
+      "Community Church holds regular orientation sessions for all who desire membership. These gatherings are intended to welcome new people by describing the life and ministry of this Christian community."
+    ]
+  }
+}

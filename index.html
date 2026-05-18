@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Community Church of Glen Rock | Glen Rock, NJ</title>
   <meta name="description" content="Welcome to Community Church of Glen Rock. Join us for worship every Sunday at 10 AM. A vibrant, inclusive community of faith in Glen Rock, NJ.">
@@ -479,6 +480,14 @@
   }
   </script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VWL0PHCQ7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4VWL0PHCQ7');
+  </script>
 </head>
 
 <body data-content="home">
@@ -540,13 +549,13 @@
   <main id="main-content">
 
     <!-- ========== 1. HERO — CINEMATIC ========== -->
-    <section class="hero" style="min-height:90vh">
+    <section class="hero hero-home">
       <div class="hero-bg">
         <img src="images/homebg-spring.jpg" alt="Community Church of Glen Rock exterior in spring">
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="section-label" style="color:var(--gold-lt);margin-bottom:1rem;font-size:0.7rem;letter-spacing:0.3em;">WELCOME HOME</span>
+        <span class="section-label hero-welcome-label">WELCOME HOME</span>
         <h1 data-cms="hero-headline">Where Faith<br>Finds Family</h1>
         <p data-cms="hero-subhead">Experience the warmth of fellowship, the power of faith, and the joy of community at our vibrant congregation.</p>
         <div class="hero-buttons">
@@ -560,19 +569,19 @@
     <section class="photo-mosaic">
       <div class="mosaic-grid">
         <div class="mosaic-item mosaic-item--tall">
-          <img src="images/congregation.jpg" alt="Congregation gathered for Sunday worship" loading="lazy">
+          <img src="images/26_05_18photos/congregation-seated-in-sanctuary.jpg" alt="Congregation gathered for Sunday worship" loading="lazy">
         </div>
         <div class="mosaic-item">
-          <img src="images/fellowship.jpg" alt="Young people in fellowship and conversation" loading="lazy">
+          <img src="images/26_05_18photos/two-women-standing-in-fellowship-hall.jpg" alt="Young people in fellowship and conversation" loading="lazy">
         </div>
         <div class="mosaic-item">
-          <img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy">
+          <img src="images/26_05_18photos/church-sanctuary-interior-with-cross-and-organ.jpg" alt="Church sanctuary interior" loading="lazy">
         </div>
         <div class="mosaic-item">
-          <img src="images/choir.jpg" alt="Church choir performing" loading="lazy">
+          <img src="images/26_05_18photos/choir-in-red-robes-near-altar.jpg" alt="Church choir performing" loading="lazy">
         </div>
         <div class="mosaic-item">
-          <img src="images/contemporary-service.jpg" alt="Community gathering in fellowship hall" loading="lazy">
+          <img src="images/26_05_18photos/congregation-reading-during-church-service.jpg" alt="Community gathering in fellowship hall" loading="lazy">
         </div>
       </div>
       <div class="mosaic-floating-card">
@@ -594,26 +603,26 @@
       <div class="ministry-cards-grid reveal-stagger">
 
         <a class="ministry-card-photo" href="worship.html" aria-label="Worship: Sunday services and sanctuary">
-          <img src="images/interior.jpg" alt="" loading="lazy" decoding="async">
+          <img src="images/26_05_18photos/christmas-party-group-on-sofa.jpg" alt="" loading="lazy" decoding="async">
           <div class="card-content">
-            <h3>Worship</h3>
-            <p data-cms="card-worship">A sacred gathering where hearts unite in praise, reflection, and spiritual growth.</p>
+            <h3 data-cms="card-0-title">Worship</h3>
+            <p data-cms="card-0-desc">A sacred gathering where hearts unite in praise, reflection, and spiritual growth.</p>
           </div>
         </a>
 
         <a class="ministry-card-photo" href="programs.html" aria-label="Programs and ministries: outreach and community life">
-          <img src="images/outreach-hands.jpg" alt="" loading="lazy" decoding="async">
+          <img src="images/26_05_18photos/women-arranging-personalized-mason-jars.jpg" alt="" loading="lazy" decoding="async">
           <div class="card-content">
-            <h3>Ministry</h3>
-            <p data-cms="card-ministry">The embodiment of compassion and service, enriching lives and fostering belonging within our congregation.</p>
+            <h3 data-cms="card-1-title">Ministry</h3>
+            <p data-cms="card-1-desc">The embodiment of compassion and service, enriching lives and fostering belonging within our congregation.</p>
           </div>
         </a>
 
         <a class="ministry-card-photo" href="about.html#membership" aria-label="Membership: join our congregation">
-          <img src="images/fellowship.jpg" alt="" loading="lazy" decoding="async">
+          <img src="images/26_05_18photos/christmas-knit-sweaters-on-table.jpg" alt="" loading="lazy" decoding="async">
           <div class="card-content">
-            <h3>Membership</h3>
-            <p data-cms="card-membership">More than a commitment &mdash; an invitation to join a supportive community and grow in faith together.</p>
+            <h3 data-cms="card-2-title">Membership</h3>
+            <p data-cms="card-2-desc">More than a commitment &mdash; an invitation to join a supportive community and grow in faith together.</p>
           </div>
         </a>
 
@@ -623,7 +632,7 @@
     <!-- ========== 4. PRAYER REQUEST — PHOTO BG ========== -->
     <section class="prayer-bar-photo reveal">
       <div class="prayer-bg">
-        <img src="images/prayer.jpg" alt="Prayer and reflection" loading="lazy">
+        <img src="images/26_05_18photos/woman-reading-scripture-at-pulpit.jpg" alt="Prayer and reflection" loading="lazy">
       </div>
       <div class="prayer-overlay"></div>
       <div class="prayer-inner">
@@ -640,16 +649,16 @@
           <div class="minister-photo">
             <img src="images/pastor-ennis.jpg" alt="Rev. Mark William Ennis" width="380" height="460">
           </div>
-          <img src="images/sermon.jpg" alt="Sunday sermon" class="minister-accent-photo" loading="lazy">
+          <img src="images/26_05_18photos/man-speaking-at-pulpit.jpg" alt="Sunday sermon" class="minister-accent-photo" loading="lazy">
         </div>
 
         <div class="minister-bio">
           <span class="section-label">Our Minister</span>
-          <h2 data-cms="pastor-name">I'm Rev. Mark William Ennis</h2>
-          <p data-cms="pastor-bio">God called me to ministry when I was four years old, and I have been an ordained minister in the Reformed Church in America for the past forty years. I have ministered in parish settings as I've nurtured, counselled, preached, and prayed with people of all ages, backgrounds, and experiences. I developed a love for storytelling as a volunteer chaplain at a Christian summer camp. Currently, I am an interim pastor and hospice chaplain. I am a preacher, teacher, weekly blogger and podcaster, as well as the author of two books, about people who are healing spiritually, with a third in process. I can help you on your journey toward spiritual growth or healing. Contact me if you would like my assistance and please hear my podcasts and read my blogs. I hope that they will bless you.</p>
+          <h2 data-cms="minister-name">I'm Rev. Mark William Ennis</h2>
+          <p data-cms="minister-bio">God called me to ministry when I was four years old, and I have been an ordained minister in the Reformed Church in America for the past forty years. I have ministered in parish settings as I've nurtured, counselled, preached, and prayed with people of all ages, backgrounds, and experiences. I developed a love for storytelling as a volunteer chaplain at a Christian summer camp. Currently, I am an interim pastor and hospice chaplain. I am a preacher, teacher, weekly blogger and podcaster, as well as the author of two books, about people who are healing spiritually, with a third in process. I can help you on your journey toward spiritual growth or healing. Contact me if you would like my assistance and please hear my podcasts and read my blogs. I hope that they will bless you.</p>
           <a href="https://www.youtube.com/@communitychurchofglenrock8594/stream"
              class="btn btn-gold" target="_blank" rel="noopener"
-             data-cms="livestream-cta">View our LIVE stream here each Sunday at 10:00am</a>
+             data-cms="minister-cta">View our LIVE stream here each Sunday at 10:00am</a>
         </div>
 
       </div>
@@ -657,10 +666,10 @@
 
     <!-- ========== 6. PHOTO STRIP — CHURCH MOMENTS ========== -->
     <div class="photo-strip">
-      <div class="photo-strip-item"><img src="images/christmas-eve.jpg" alt="Christmas Eve candlelight service" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/luncheon.jpg" alt="Community luncheon gathering" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/communion.jpg" alt="Communion Sunday" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/palm-sunday.jpg" alt="Palm Sunday celebration" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/christmas-event-youth-and-adults-group.jpg" alt="Christmas Eve candlelight service" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/christmas-luncheon-group-at-decorated-table.jpg" alt="Community luncheon gathering" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/communion-elements-chalice-and-bread.jpg" alt="Communion Sunday" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/congregation-gathering-near-hymn-board.jpg" alt="Palm Sunday celebration" loading="lazy"></div>
     </div>
 
     <!-- ========== 7. MISSION — CINEMATIC ========== -->
@@ -670,7 +679,7 @@
 
     <section class="mission-section mission-photo-bg">
       <div class="mission-bg-img">
-        <img src="images/congregation.jpg" alt="Our congregation" loading="lazy">
+        <img src="images/26_05_18photos/children-dyeing-easter-eggs.jpg" alt="Our congregation" loading="lazy">
       </div>
       <div class="mission-bg-overlay"></div>
       <div class="mission-content reveal">
@@ -684,7 +693,7 @@
     <div class="dual-cta-photo">
 
       <div class="dual-cta-photo-col">
-        <img src="images/contemporary-service.jpg" alt="Church community gathering" loading="lazy">
+        <img src="images/26_05_18photos/christmas-luncheon-three-guests-at-table.jpg" alt="Church community gathering" loading="lazy">
         <div class="cta-overlay"></div>
         <div class="cta-inner">
           <h2 data-cms="membership-headline">Membership</h2>
@@ -694,7 +703,7 @@
       </div>
 
       <div class="dual-cta-photo-col">
-        <img src="images/give.jpg" alt="Hands holding a gift of giving" loading="lazy">
+        <img src="images/26_05_18photos/child-with-teddy-bear-and-christmas-gifts.jpg" alt="Hands holding a gift of giving" loading="lazy">
         <div class="cta-overlay"></div>
         <div class="cta-inner">
           <h2 data-cms="support-headline">Support Us</h2>
@@ -710,31 +719,31 @@
       <h2>Community Life</h2>
     </div>
 
-    <section style="background:var(--cream-dk);padding-bottom:1rem;">
+    <section class="home-support-band">
       <div class="gallery-grid reveal-stagger">
         <div class="gallery-item gallery-item--tall">
-          <img src="images/book-club.jpg" alt="Church book club meeting" loading="lazy">
+          <img src="images/26_05_18photos/two-women-at-easter-activity-table.jpg" alt="Church book club meeting" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="images/children.jpg" alt="Children's ministry" loading="lazy">
+          <img src="images/26_05_18photos/children-at-easter-activity-tables.jpg" alt="Children's ministry" loading="lazy">
         </div>
         <div class="gallery-item gallery-item--wide">
-          <img src="images/craft-day.jpg" alt="Craft day activities" loading="lazy">
+          <img src="images/26_05_18photos/easter-craft-activity-group.jpg" alt="Craft day activities" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="images/souper-bowl.jpg" alt="Souper Bowl community event" loading="lazy">
+          <img src="images/26_05_18photos/christmas-stockings-and-gift-bags-on-sofa.jpg" alt="Souper Bowl community event" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="images/bible-study.jpg" alt="Bible study group" loading="lazy">
+          <img src="images/26_05_18photos/youth-and-adults-near-stained-glass.jpg" alt="Bible study group" loading="lazy">
         </div>
         <div class="gallery-item gallery-item--tall">
-          <img src="images/handbells.jpg" alt="Handbell choir" loading="lazy">
+          <img src="images/26_05_18photos/choir-singing-in-sanctuary.jpg" alt="Handbell choir" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="images/grace.jpg" alt="Moments of grace" loading="lazy">
+          <img src="images/26_05_18photos/teen-girl-painting-wooden-ornament.jpg" alt="Moments of grace" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="images/blood-drive.jpg" alt="Community blood drive" loading="lazy">
+          <img src="images/26_05_18photos/boy-scouts-receiving-recognition.jpg" alt="Community blood drive" loading="lazy">
         </div>
       </div>
     </section>
@@ -767,7 +776,7 @@
         <h4>Find Us</h4>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5!2d-74.1299!3d40.9601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s354+Rock+Road%2C+Glen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1"
-          width="100%" height="190" style="border:0;border-radius:4px;"
+          width="100%" height="190"
           allowfullscreen loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Map to Community Church of Glen Rock">
@@ -787,13 +796,13 @@
     <div class="ccgr-popup">
       <button class="ccgr-popup__close" type="button" aria-label="Close welcome message" data-ccgr-popup-close>&times;</button>
       <div class="ccgr-popup__photo" aria-hidden="true">
-        <img src="images/congregation.jpg" alt="">
+        <img src="images/26_05_18photos/group-at-easter-craft-tables-with-paint.jpg" alt="">
       </div>
       <div class="ccgr-popup__content">
         <img src="images/logo.png" alt="Community Church of Glen Rock" class="ccgr-popup__logo">
         <span class="ccgr-popup__label">Welcome</span>
         <h2 class="ccgr-popup__heading" id="ccgrPopupHeading">Join us, in person &amp; online</h2>
-        <ul class="ccgr-popup__links">
+        <ul class="ccgr-popup__links" id="cms-popup-links">
           <li>
             <a href="https://www.youtube.com/@communitychurchofglenrock8594/streams" class="ccgr-popup__link" target="_blank" rel="noopener">
               <span>

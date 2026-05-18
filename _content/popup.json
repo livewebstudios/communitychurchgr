@@ -1,0 +1,41 @@
+{
+  "heading": "Join us, in person &amp; online",
+  "links": [
+    {
+      "when":    "Sunday 10 AM",
+      "title":   "Live Stream",
+      "url":     "https://www.youtube.com/@communitychurchofglenrock8594/streams",
+      "new_tab": true
+    },
+    {
+      "when":    "Sunday 5 PM",
+      "title":   "Zoom Gathering",
+      "url":     "https://us02web.zoom.us/j/85619405313",
+      "new_tab": true
+    },
+    {
+      "when":    "Wednesday 8 PM",
+      "title":   "Bible Study on Zoom",
+      "url":     "https://us02web.zoom.us/j/85619405313",
+      "new_tab": true
+    },
+    {
+      "when":    "Stay Connected",
+      "title":   "Join Our Email List",
+      "url":     "https://communitychurchgr.shelbynextchms.com/external/form/26d6523b-dbbd-49a8-b18a-46ccf4ece0b8",
+      "new_tab": true
+    },
+    {
+      "when":    "We're Here",
+      "title":   "Submit a Prayer Request",
+      "url":     "https://communitychurchgr.shelbynextchms.com/external/form/73ad9f47-3634-439f-8f99-874bec3c57b5",
+      "new_tab": true
+    },
+    {
+      "when":    "Fall Sunday AM Bible Study",
+      "title":   "Book Link",
+      "url":     "https://www.amazon.com/She-Called-Women-Bible-Study/dp/0916466221",
+      "new_tab": true
+    }
+  ]
+}

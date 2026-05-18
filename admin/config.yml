@@ -11,25 +11,30 @@ backend:
   branch: main
 
 media_folder: "images/uploads"
-public_folder: "/images/uploads"
+public_folder: "images/uploads"
 
 collections:
 
   # ----------------------------------------------------------
-  # BLOG POSTS
+  # BLOG ARTICLES
+  # Single JSON file — add/edit/reorder from Decap admin.
   # ----------------------------------------------------------
   - name: "blog"
-    label: "Blog Posts"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title",          name: "title",   widget: "string" }
-      - { label: "Date",           name: "date",    widget: "datetime" }
-      - { label: "Author",         name: "author",  widget: "string", default: "Community Church of Glen Rock" }
-      - { label: "Featured Image", name: "image",   widget: "image",  required: false }
-      - { label: "Excerpt",        name: "excerpt", widget: "text" }
-      - { label: "Body",           name: "body",    widget: "markdown" }
+    label: "Blog Articles"
+    files:
+      - label: "Blog Posts"
+        name: "blog"
+        file: "_content/blog.json"
+        fields:
+          - label: "Articles"
+            name: "articles"
+            widget: "list"
+            fields:
+              - { label: "Title",         name: "title",   widget: "string" }
+              - { label: "Date",          name: "date",    widget: "string",   hint: "e.g. June 25, 2025" }
+              - { label: "Excerpt",       name: "excerpt", widget: "text" }
+              - { label: "Featured Image",name: "image",   widget: "image",    required: false }
+              - { label: "Link URL",      name: "url",     widget: "string",   required: false, default: "#", hint: "Leave # if no separate post page" }
 
   # ----------------------------------------------------------
   # PAGE CONTENT
@@ -38,129 +43,179 @@ collections:
     label: "Page Content"
     files:
 
+      # ---- OUR MINISTER (shared by Home + About) ----------
+      - label: "Our Minister"
+        name: "minister"
+        file: "_content/minister.json"
+        fields:
+          - { label: "Minister Name",          name: "name",           widget: "string" }
+          - { label: "Bio",                    name: "bio",            widget: "text" }
+          - { label: "Live Stream Button Text",name: "livestream_cta", widget: "string" }
+          - { label: "Live Stream URL",        name: "livestream_url", widget: "string" }
+
+      # ---- HOME PAGE --------------------------------------
       - label: "Home Page"
         name: "home"
         file: "_content/home.json"
         fields:
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Headline",           name: "headline",   widget: "string" }
-              - { label: "Subheadline",        name: "subhead",    widget: "string" }
-              - { label: "CTA Button 1 Label", name: "cta1_label", widget: "string" }
-              - { label: "CTA Button 1 URL",   name: "cta1_url",   widget: "string" }
-              - { label: "CTA Button 2 Label", name: "cta2_label", widget: "string" }
-              - { label: "CTA Button 2 URL",   name: "cta2_url",   widget: "string" }
           - label: "Ministry Cards (3 boxes below hero)"
             name: "ministry_cards"
             widget: "list"
-            max: 3
             min: 3
+            max: 3
             fields:
-              - { label: "Title",       name: "title",       widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-          - label: "Pastor Section"
-            name: "pastor"
-            widget: "object"
-            fields:
-              - { label: "Name",             name: "name",             widget: "string" }
-              - { label: "Bio",              name: "bio",              widget: "markdown" }
-              - { label: "Live Stream CTA",  name: "livestream_cta",   widget: "string" }
-              - { label: "Live Stream URL",  name: "livestream_url",   widget: "string" }
+              - { label: "Card Title",       name: "title",       widget: "string" }
+              - { label: "Card Description", name: "description", widget: "text" }
           - label: "Mission Section"
             name: "mission"
             widget: "object"
             fields:
               - { label: "Headline",    name: "headline",    widget: "string" }
               - { label: "Subheadline", name: "subheadline", widget: "string" }
-              - { label: "Body Text",   name: "body",        widget: "markdown" }
-          - label: "Membership and Support"
+              - { label: "Body Text",   name: "body",        widget: "text" }
+          - label: "Membership & Support"
             name: "membership_support"
             widget: "object"
             fields:
               - { label: "Membership Headline",    name: "membership_headline",    widget: "string" }
               - { label: "Membership Description", name: "membership_description", widget: "text" }
-              - { label: "Membership CTA Label",   name: "membership_cta",         widget: "string" }
+              - { label: "Membership Button Text", name: "membership_cta",         widget: "string" }
               - { label: "Support Headline",       name: "support_headline",       widget: "string" }
               - { label: "Support Description",    name: "support_description",    widget: "text" }
-              - { label: "Support CTA Label",      name: "support_cta",            widget: "string" }
+              - { label: "Support Button Text",    name: "support_cta",            widget: "string" }
               - { label: "Donation URL",           name: "donation_url",           widget: "string" }
 
+      # ---- HOME PAGE POPUP --------------------------------
+      - label: "Welcome Popup"
+        name: "popup"
+        file: "_content/popup.json"
+        fields:
+          - { label: "Popup Heading", name: "heading", widget: "string" }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "When / Label",  name: "when",    widget: "string" }
+              - { label: "Link Title",    name: "title",   widget: "string" }
+              - { label: "URL",           name: "url",     widget: "string" }
+              - { label: "Open New Tab",  name: "new_tab", widget: "boolean", default: true }
+
+      # ---- ABOUT PAGE -------------------------------------
       - label: "About Page"
         name: "about"
         file: "_content/about.json"
         fields:
-          - label: "Page Header"
-            name: "header"
+          - label: "Our Consistory"
+            name: "consistory"
             widget: "object"
             fields:
-              - { label: "Tagline",  name: "tagline",  widget: "string" }
-              - { label: "Headline", name: "headline", widget: "string" }
-              - { label: "Intro",    name: "intro",    widget: "text" }
-          - label: "History Section"
+              - label: "Intro Paragraphs"
+                name: "intro"
+                widget: "list"
+                field: { label: "Paragraph", name: "text", widget: "text" }
+              - label: "Consistory Members"
+                name: "members"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Role", name: "role", widget: "string", hint: "Elder or Deacon" }
+          - label: "Our History"
             name: "history"
             widget: "object"
             fields:
-              - { label: "Headline", name: "headline", widget: "string" }
-              - { label: "Body",     name: "body",     widget: "markdown" }
-              - label: "Bullet Points"
-                name: "bullets"
+              - label: "Paragraphs"
+                name: "paragraphs"
                 widget: "list"
-                field: { label: "Point", name: "point", widget: "string" }
-          - label: "Event Spaces Section"
-            name: "event_spaces"
+                field: { label: "Paragraph", name: "text", widget: "text" }
+          - label: "Membership (About Page)"
+            name: "membership"
             widget: "object"
             fields:
-              - { label: "Headline",     name: "headline",     widget: "string" }
-              - { label: "Intro",        name: "intro",        widget: "text" }
-              - label: "Space Features"
-                name: "features"
+              - label: "Paragraphs"
+                name: "paragraphs"
                 widget: "list"
-                field: { label: "Feature", name: "feature", widget: "string" }
-              - { label: "Contact Note", name: "contact_note", widget: "string" }
+                field: { label: "Paragraph", name: "text", widget: "text" }
 
+      # ---- WORSHIP PAGE -----------------------------------
       - label: "Worship Page"
         name: "worship"
         file: "_content/worship.json"
         fields:
-          - { label: "Page Headline", name: "headline",        widget: "string" }
-          - { label: "Intro Text",    name: "intro",           widget: "text" }
-          - label: "Service Times"
+          - label: "Sunday Services"
             name: "services"
-            widget: "list"
+            widget: "object"
             fields:
-              - { label: "Service Name", name: "name",        widget: "string" }
-              - { label: "Day and Time", name: "time",        widget: "string" }
-              - { label: "Description",  name: "description", widget: "text", required: false }
-          - { label: "Live Stream URL",   name: "livestream_url",   widget: "string" }
-          - { label: "Live Stream Label", name: "livestream_label", widget: "string" }
+              - label: "Service List Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label (bold)",  name: "label",  widget: "string" }
+                  - { label: "Detail text",   name: "detail", widget: "text" }
+          - label: "Worship Style"
+            name: "worship_style"
+            widget: "object"
+            fields:
+              - { label: "Headline",    name: "headline",    widget: "string" }
+              - { label: "Subheadline", name: "subheadline", widget: "string" }
+              - label: "Body Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "text", widget: "text" }
+          - label: "Special Occasions"
+            name: "special_occasions"
+            widget: "object"
+            fields:
+              - { label: "Intro Text", name: "intro", widget: "text" }
+              - label: "Venue Cards"
+                name: "venues"
+                widget: "list"
+                fields:
+                  - { label: "Venue Title",       name: "title",       widget: "string" }
+                  - { label: "Venue Description", name: "description", widget: "text" }
 
-      - label: "Programs and Ministries Page"
+      # ---- PROGRAMS PAGE ----------------------------------
+      - label: "Programs & Ministries Page"
         name: "programs"
         file: "_content/programs.json"
         fields:
-          - { label: "Page Headline", name: "headline", widget: "string" }
-          - { label: "Intro Text",    name: "intro",    widget: "text" }
-          - label: "Ministry Items"
-            name: "ministries"
+          - label: "Program Cards"
+            name: "cards"
             widget: "list"
             fields:
-              - { label: "Ministry Name", name: "name",        widget: "string" }
-              - { label: "Description",   name: "description", widget: "text" }
+              - { label: "Program Title",       name: "title",       widget: "string" }
+              - { label: "Program Description", name: "description", widget: "text" }
+          - label: "Outreach Section"
+            name: "outreach"
+            widget: "object"
+            fields:
+              - { label: "Outreach Text", name: "text", widget: "text" }
+          - label: "Community Thrift Shop"
+            name: "thrift_shop"
+            widget: "object"
+            fields:
+              - { label: "Intro",           name: "intro",          widget: "text" }
+              - { label: "Location",        name: "location",       widget: "string" }
+              - { label: "Location Phone",  name: "location_phone", widget: "string" }
+              - { label: "Items Accepted",  name: "items_accepted", widget: "text" }
+              - { label: "Donation Hours",  name: "donation_hours", widget: "string" }
+              - { label: "Shopping Hours",  name: "shopping_hours", widget: "string" }
+              - { label: "Contact Note",    name: "contact_note",   widget: "string" }
 
+      # ---- CONTACT PAGE -----------------------------------
       - label: "Contact Page"
         name: "contact"
         file: "_content/contact.json"
         fields:
-          - { label: "Page Headline", name: "headline",  widget: "string" }
-          - { label: "Intro Text",    name: "intro",     widget: "text" }
-          - { label: "Address",       name: "address",   widget: "string" }
-          - { label: "Phone",         name: "phone",     widget: "string" }
-          - { label: "Email",         name: "email",     widget: "string" }
-          - { label: "Office Hours",  name: "hours",     widget: "text",   required: false }
-          - { label: "Map Embed URL", name: "map_embed", widget: "string" }
+          - label: "Membership Section"
+            name: "membership"
+            widget: "object"
+            fields:
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "text", widget: "text" }
 
+      # ---- SITE SETTINGS ----------------------------------
       - label: "Site Settings"
         name: "settings"
         file: "_content/settings.json"
@@ -172,9 +227,3 @@ collections:
           - { label: "Address",   name: "address",   widget: "string" }
           - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
           - { label: "YouTube URL",  name: "youtube",  widget: "string", required: false }
-          - label: "Navigation Links"
-            name: "nav"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL",   name: "url",   widget: "string" }

@@ -1,0 +1,60 @@
+{
+  "articles": [
+    {
+      "title":   "Community Thrift Shop",
+      "date":    "June 25, 2025",
+      "excerpt": "Please consider donating your pre-loved items to the Community Thrift Shop in Midland Park.",
+      "image":   "images/26_05_18photos/easter-craft-activity-group.jpg",
+      "url":     "#"
+    },
+    {
+      "title":   "Bible Study",
+      "date":    "June 24, 2025",
+      "excerpt": "Bible Study on Wednesday Nights via Zoom at 8 pm. Open to all ages.",
+      "image":   "images/26_05_18photos/youth-and-adults-near-stained-glass.jpg",
+      "url":     "#"
+    },
+    {
+      "title":   "Communion Sundays",
+      "date":    "June 24, 2025",
+      "excerpt": "The first Sunday of each month we receive the Sacrament of Holy Communion.",
+      "image":   "images/26_05_18photos/communion-elements-chalice-and-bread.jpg",
+      "url":     "#"
+    },
+    {
+      "title":   "Healing Sundays",
+      "date":    "June 24, 2025",
+      "excerpt": "Healing Sunday is every 3rd Sunday of each month at our 10am service.",
+      "image":   "images/26_05_18photos/teen-girl-painting-wooden-ornament.jpg",
+      "url":     "#"
+    },
+    {
+      "title":   "Prayer Requests & Pastoral Visits",
+      "date":    "June 24, 2025",
+      "excerpt": "If you or a family member are hospitalized, please call the office to arrange a pastoral visit.",
+      "image":   "images/26_05_18photos/woman-reading-scripture-at-pulpit.jpg",
+      "url":     "#"
+    },
+    {
+      "title":   "Lenten Events",
+      "date":    "March 7, 2025",
+      "excerpt": "Pot-Luck Lunches and Exploring Fruit and Gifts of the Spirit series.",
+      "image":   "images/26_05_18photos/congregation-gathering-near-hymn-board.jpg",
+      "url":     "#"
+    },
+    {
+      "title":   "Introducing Our Interim Pastor",
+      "date":    "January 21, 2025",
+      "excerpt": "I'm Rev. Mark William Ennis. God called me to ministry when I was four years old.",
+      "image":   "images/26_05_18photos/pastor-at-pulpit-during-service.jpg",
+      "url":     "#"
+    },
+    {
+      "title":   "A Reflection on a Year of Service",
+      "date":    "June 27, 2021",
+      "excerpt": "This year I have had the honor of recording the church services and streaming them online.",
+      "image":   "images/26_05_18photos/church-sanctuary-interior-with-cross-and-organ.jpg",
+      "url":     "#"
+    }
+  ]
+}

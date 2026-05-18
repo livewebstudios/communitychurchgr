@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Worship — Community Church of Glen Rock | Glen Rock, NJ</title>
   <meta name="description" content="Join us for worship every Sunday at 10 AM. Experience heartfelt services, live streaming, and special occasions at Community Church of Glen Rock.">
@@ -9,7 +10,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Worship — Community Church of Glen Rock | Glen Rock, NJ">
   <meta property="og:description" content="Join us for worship every Sunday at 10 AM. Experience heartfelt services, live streaming, and special occasions at Community Church of Glen Rock.">
-  <meta property="og:image" content="https://communitychurchgr.com/images/hero-worship.jpg">
+  <meta property="og:image" content="https://communitychurchgr.com/images/26_05_18photos/choir-singing-in-red-robes.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://communitychurchgr.com/worship.html">
 
@@ -301,8 +302,14 @@
   }
   </script>
 
-  <!-- GA4 — replace G-XXXXXXXX when client provides ID -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script> -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VWL0PHCQ7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4VWL0PHCQ7');
+  </script>
 </head>
 
 <body data-content="worship">
@@ -389,7 +396,7 @@
     <!-- ========== 1. HERO ========== -->
     <section class="hero hero-short">
       <div class="hero-bg">
-        <img src="images/hero-worship.jpg"
+        <img src="images/26_05_18photos/choir-singing-in-red-robes.jpg"
              alt="Worship at Community Church of Glen Rock">
       </div>
       <div class="hero-overlay"></div>
@@ -405,7 +412,7 @@
 
     <!-- ========== 3. FEATURE PHOTO ========== -->
     <div class="feature-photo">
-      <img src="images/congregation.jpg" alt="Congregation gathered for Sunday worship" loading="lazy">
+      <img src="images/26_05_18photos/congregation-seated-in-sanctuary.jpg" alt="Congregation gathered for Sunday worship" loading="lazy">
     </div>
 
     <!-- ========== 4. SUNDAY SERVICES ========== -->
@@ -416,7 +423,7 @@
     <section id="services" class="services-section reveal">
       <div class="container">
         <div class="content-block">
-          <ul class="services-list">
+          <ul class="services-list" id="cms-services-list">
             <li><strong>Sunday Worship Service:</strong> Every Sunday at 10:00 am in our air-conditioned sanctuary, featuring word and music.</li>
             <li><strong>Additional Services:</strong> Services added during the Advent Season and Holy Week.</li>
             <li><strong>Sacraments:</strong> Holy Baptism (including infants and adults) and the Lord's Supper (Communion) celebrated on the 1st Sunday of each month.</li>
@@ -426,23 +433,23 @@
           </ul>
         </div>
 
-        <img src="images/communion.jpg" alt="Communion Sunday at Community Church" class="service-inline-photo" loading="lazy">
+        <img src="images/26_05_18photos/communion-elements-chalice-and-bread.jpg" alt="Communion Sunday at Community Church" class="service-inline-photo" loading="lazy">
 
         <!-- Worship Style — 2 Column Layout -->
         <div class="worship-style-grid reveal">
           <div class="worship-style-text">
-            <h2>Worship Style</h2>
-            <p class="subheadline">Rooted in Reverence, Inclusivity, and Joy</p>
-            <p>Guided by our belief in the transformative power of faith, our services are designed to create meaningful connections with one another and with the divine. Each Sunday, we come together in our air-conditioned sanctuary to engage in heartfelt expressions of worship through word and music.</p>
-            <p>Our worship format blends traditional elements with contemporary expressions, offering a dynamic and enriching experience for all who gather with us. We strive to create an atmosphere of warmth and welcome, where individuals from all walks of life can find acceptance and belonging.</p>
-            <p>Our services feature a balance of prayer, scripture readings, sermons, and musical offerings, designed to inspire and uplift the soul. Whether you are seeking solace, inspiration, or community, our worship services provide a sacred space for reflection, renewal, and connection.</p>
+            <h2 data-cms="worship-style-headline">Worship Style</h2>
+            <p class="subheadline" data-cms="worship-style-subheadline">Rooted in Reverence, Inclusivity, and Joy</p>
+            <p data-cms="worship-style-0">Guided by our belief in the transformative power of faith, our services are designed to create meaningful connections with one another and with the divine. Each Sunday, we come together in our air-conditioned sanctuary to engage in heartfelt expressions of worship through word and music.</p>
+            <p data-cms="worship-style-1">Our worship format blends traditional elements with contemporary expressions, offering a dynamic and enriching experience for all who gather with us. We strive to create an atmosphere of warmth and welcome, where individuals from all walks of life can find acceptance and belonging.</p>
+            <p data-cms="worship-style-2">Our services feature a balance of prayer, scripture readings, sermons, and musical offerings, designed to inspire and uplift the soul. Whether you are seeking solace, inspiration, or community, our worship services provide a sacred space for reflection, renewal, and connection.</p>
           </div>
           <div class="worship-style-photo">
-            <img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy">
+            <img src="images/26_05_18photos/church-sanctuary-interior-with-cross-and-organ.jpg" alt="Church sanctuary interior" loading="lazy">
           </div>
         </div>
 
-        <img src="images/choir.jpg" alt="Church choir performing" class="service-inline-photo" loading="lazy">
+        <img src="images/26_05_18photos/choir-in-red-robes-near-altar.jpg" alt="Church choir performing" class="service-inline-photo" loading="lazy">
 
       </div>
     </section>
@@ -454,14 +461,14 @@
 
     <section id="livestream" class="livestream-photo-bg reveal">
       <div class="livestream-bg">
-        <img src="images/sermon.jpg" alt="Sunday sermon" loading="lazy">
+        <img src="images/26_05_18photos/man-speaking-at-pulpit.jpg" alt="Sunday sermon" loading="lazy">
       </div>
       <div class="livestream-overlay"></div>
       <div class="livestream-inner">
         <h2>Join Us From Anywhere</h2>
         <p>Join our growing international community of congregants via livestream every Sunday at 10:00 AM.</p>
         <a href="https://www.youtube.com/@communitychurchofglenrock8594/stream"
-           class="btn btn-outline" style="border-color:rgba(255,255,255,0.6);color:var(--white);"
+           class="btn btn-outline"
            target="_blank"
            rel="noopener">Watch Live on YouTube</a>
       </div>
@@ -472,50 +479,50 @@
       <h2>Special Occasions</h2>
     </div>
 
-    <section id="special-occasions" class="special-occasions-section reveal" style="padding:0 0 var(--section-pad);">
+    <section id="special-occasions" class="special-occasions-section special-occasions-section--flush reveal">
       <div class="occasions-intro">
-        <p>The Community Church of Glen Rock is conveniently located to public transportation and situated on quiet, spacious grounds. We welcome the use of our beautiful campus by interested parties in the extended community. Contact Kris Roy, Property Manager for more information.</p>
+        <p data-cms="occasions-intro">The Community Church of Glen Rock is conveniently located to public transportation and situated on quiet, spacious grounds. We welcome the use of our beautiful campus by interested parties in the extended community. Contact Kris Roy, Property Manager for more information.</p>
       </div>
 
       <div class="venue-cards-grid reveal-stagger">
 
         <div class="venue-card-photo">
-          <img src="images/fellowship-hall.jpg" alt="Fellowship Hall" loading="lazy">
+          <img src="images/26_05_18photos/two-women-standing-in-fellowship-hall.jpg" alt="Fellowship Hall" loading="lazy">
           <div class="card-content">
-            <h3>Fellowship Hall</h3>
-            <p>Spacious hall for lectures, conferences, receptions, and events.</p>
+            <h3 data-cms="venue-0-title">Fellowship Hall</h3>
+            <p data-cms="venue-0-desc">Spacious hall for lectures, conferences, receptions, and events.</p>
           </div>
         </div>
 
         <div class="venue-card-photo">
-          <img src="images/room1.jpg" alt="Education building meeting room" loading="lazy">
+          <img src="images/26_05_18photos/youth-and-adults-near-stained-glass.jpg" alt="Education building meeting room" loading="lazy">
           <div class="card-content">
-            <h3>Education Building</h3>
-            <p>Intimate adjoining spaces in our education building for smaller gatherings.</p>
+            <h3 data-cms="venue-1-title">Education Building</h3>
+            <p data-cms="venue-1-desc">Intimate adjoining spaces in our education building for smaller gatherings.</p>
           </div>
         </div>
 
         <div class="venue-card-photo">
-          <img src="images/interior.jpg" alt="Church sanctuary" loading="lazy">
+          <img src="images/26_05_18photos/boy-scout-presenting-at-pulpit.jpg" alt="Church sanctuary" loading="lazy">
           <div class="card-content">
-            <h3>Sanctuary</h3>
-            <p>Stunning sanctuary with excellent acoustics for weddings and concerts.</p>
+            <h3 data-cms="venue-2-title">Sanctuary</h3>
+            <p data-cms="venue-2-desc">Stunning sanctuary with excellent acoustics for weddings and concerts.</p>
           </div>
         </div>
 
       </div>
 
-      <div class="text-center" style="margin-top:2.5rem;">
+      <div class="text-center mt-10">
         <a href="contact.html" class="btn btn-gold">Contact Us</a>
       </div>
     </section>
 
     <!-- ========== 7. PHOTO STRIP — WORSHIP MOMENTS ========== -->
     <div class="photo-strip">
-      <div class="photo-strip-item"><img src="images/christmas-eve.jpg" alt="Christmas Eve candlelight service" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/palm-sunday.jpg" alt="Palm Sunday celebration" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/handbells.jpg" alt="Handbell choir" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/baptism.jpg" alt="Baptism ceremony" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/christmas-event-youth-and-adults-group.jpg" alt="Christmas Eve candlelight service" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/congregation-gathering-near-hymn-board.jpg" alt="Palm Sunday celebration" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/choir-singing-in-sanctuary.jpg" alt="Handbell choir" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/children-lined-up-in-church-aisle.jpg" alt="Baptism ceremony" loading="lazy"></div>
     </div>
 
   </main>
@@ -555,7 +562,7 @@
         <h4>Find Us</h4>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5!2d-74.1299!3d40.9601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s354+Rock+Road%2C+Glen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1"
-          width="100%" height="190" style="border:0;border-radius:4px;"
+          width="100%" height="190"
           allowfullscreen loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Map to Community Church of Glen Rock">
@@ -579,13 +586,13 @@
     <div class="ccgr-popup">
       <button class="ccgr-popup__close" type="button" aria-label="Close welcome message" data-ccgr-popup-close>&times;</button>
       <div class="ccgr-popup__photo" aria-hidden="true">
-        <img src="images/congregation.jpg" alt="">
+        <img src="images/26_05_18photos/boy-scout-troop-at-front-of-sanctuary.jpg" alt="">
       </div>
       <div class="ccgr-popup__content">
         <img src="images/logo.png" alt="Community Church of Glen Rock" class="ccgr-popup__logo">
         <span class="ccgr-popup__label">Welcome</span>
         <h2 class="ccgr-popup__heading" id="ccgrPopupHeading">Join us, in person &amp; online</h2>
-        <ul class="ccgr-popup__links">
+        <ul class="ccgr-popup__links" id="cms-popup-links">
           <li>
             <a href="https://www.youtube.com/@communitychurchofglenrock8594/streams" class="ccgr-popup__link" target="_blank" rel="noopener">
               <span>

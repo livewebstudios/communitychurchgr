@@ -18,7 +18,7 @@
   --cream:        #f7f1e6;
   --cream-dk:     #ede3d2;
   --white:        #ffffff;
-  --muted:        #9a8e84;
+  --muted:        #6b5f57;   /* 4.97:1 on cream — was #9a8e84 (failed WCAG AA) */
   --overlay:      rgba(74,67,64,0.62);
 
   /* Semantic color — derived from brand teal/gold */
@@ -348,6 +348,29 @@ p {
   color: var(--white);
 }
 
+/* Loading state — form submit feedback */
+.btn.is-loading {
+  pointer-events: none;
+  opacity: 0.72;
+  position: relative;
+}
+.btn.is-loading::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: btnSpin 0.7s linear infinite;
+}
+@keyframes btnSpin {
+  to { transform: translateY(-50%) rotate(360deg); }
+}
+
 /* Press feedback — short, decisive (GPU: transform only) */
 .btn:active {
   transform: scale(0.98);
@@ -599,7 +622,8 @@ p {
 }
 
 .has-dropdown:hover .dropdown,
-.has-dropdown.open .dropdown {
+.has-dropdown.open .dropdown,
+.has-dropdown:focus-within .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
@@ -686,8 +710,9 @@ p {
 .hero-bg img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+  animation: heroZoom 32s ease-in-out infinite alternate;
 }
 
 .hero-short {
@@ -968,7 +993,7 @@ p {
   margin: 0 auto;
   display: grid;
   gap: 2.5rem;
-  padding: 3rem 2rem;
+  padding: var(--section-pad) 2rem;
 }
 
 .staff-grid {
@@ -1190,7 +1215,7 @@ p {
 }
 
 .prayer-bar a {
-  color: var(--teal);
+  color: var(--teal-dk);
   font-weight: 400;
   position: relative;
 }
@@ -1380,8 +1405,12 @@ p {
   background: var(--cream);
   padding: 3.5rem 2rem;
   text-align: center;
+}
+
+.about-intro p {
   max-width: 800px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-intro p {
@@ -1533,7 +1562,7 @@ p {
 .worship-style .subtitle {
   font-family: var(--font-serif);
   font-style: italic;
-  color: var(--teal);
+  color: var(--teal-dk);
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
@@ -1664,7 +1693,7 @@ p {
 }
 
 .contact-info-grid .info-item h4 {
-  color: var(--teal);
+  color: var(--teal-dk);
   margin-bottom: 0.5rem;
   font-size: 0.75rem;
   letter-spacing: 0.15em;
@@ -1725,6 +1754,11 @@ p {
    14f. PAGE-SPECIFIC: BLOG
    -------------------------------------------------- */
 
+/* Blog hero band */
+.blog-hero-band {
+  background: var(--cream-dk);
+}
+
 .blog-grid {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -1736,6 +1770,39 @@ p {
 
 .blog-card-body .date {
   display: block;
+}
+
+/* Utility helpers to replace inline styles */
+.text-center { text-align: center; }
+.mt-10 { margin-top: 2.5rem; }
+
+/* Hero home — full-height override */
+.hero-home { min-height: 90vh; }
+
+/* Hero welcome label — gold, small-caps, spaced */
+.hero-welcome-label {
+  color: var(--gold-lt);
+  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+}
+
+/* Home — donation/support band */
+.home-support-band {
+  background: var(--cream-dk);
+  padding-bottom: 1rem;
+}
+
+/* Special occasions section padding adjustment */
+.special-occasions-section--flush {
+  padding-top: 0;
+}
+
+/* Google Maps iframes — border reset */
+.map-section iframe,
+.footer-col iframe {
+  border: 0;
+  border-radius: 4px;
 }
 
 /* --------------------------------------------------
@@ -1811,7 +1878,7 @@ p {
   }
 
   .dropdown a {
-    padding: 0.5rem 1.25rem;
+    padding: 0.85rem 1.25rem;  /* min 44px touch target */
     font-size: 0.85rem;
   }
 
@@ -1950,6 +2017,36 @@ p {
 
   .dual-cta-col {
     padding: 2.5rem 2rem;
+  }
+
+  /* Step grids from 3-4 columns → 2 columns at tablet */
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .staff-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .consistory-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
   }
 }
 

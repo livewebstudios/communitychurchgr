@@ -29,16 +29,24 @@
     });
   }
 
-  /* ---- Mobile dropdown tap-to-expand ---- */
+  /* ---- Mobile dropdown tap-to-expand + aria-expanded ---- */
   dropdowns.forEach(function (item) {
     var link = item.querySelector('.nav-link');
+    /* Mark dropdown parent links for screen readers */
+    link.setAttribute('aria-expanded', 'false');
+    link.setAttribute('aria-haspopup', 'true');
+
     link.addEventListener('click', function (e) {
       if (window.innerWidth <= 768) {
         e.preventDefault();
-        item.classList.toggle('open');
+        var isOpen = item.classList.toggle('open');
+        link.setAttribute('aria-expanded', String(isOpen));
         /* close sibling dropdowns */
         dropdowns.forEach(function (other) {
-          if (other !== item) other.classList.remove('open');
+          if (other !== item) {
+            other.classList.remove('open');
+            other.querySelector('.nav-link').setAttribute('aria-expanded', 'false');
+          }
         });
       }
     });

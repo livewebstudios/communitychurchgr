@@ -1,0 +1,40 @@
+{
+  "cards": [
+    {
+      "title":       "Lenten Events",
+      "description": "Pot-Luck Lunches in the drop-in center on Sunday, 11 a.m., following worship. Exploring Fruit and Gifts of the Spirit series."
+    },
+    {
+      "title":       "Bible Study",
+      "description": "Wednesday Evening Bible Study via Zoom at 8 pm. Open to men and women of all ages. Led by Rev. Dr. Pamela Pater-Ennis."
+    },
+    {
+      "title":       "Communion Sundays",
+      "description": "The first Sunday of each month we receive the Sacrament of Holy Communion. Homebound communion available upon request."
+    },
+    {
+      "title":       "Healing Sundays",
+      "description": "Every 3rd Sunday of each month at our 10am service. Join us for healing prayers and connection."
+    },
+    {
+      "title":       "Prayer Requests",
+      "description": "Submit prayer requests to the church. Call (201) 444-4625 or email pastor@communitychurchgr.com."
+    },
+    {
+      "title":       "Community Meals",
+      "description": "Help support missions in New Jersey and Kenya. Our campus is home to Community Meals, delivering meals to our area's home-bound residents."
+    }
+  ],
+  "outreach": {
+    "text": "Help support us with a financial contribution. We support missions in New Jersey and Kenya. Our campus is home to groups including Community Meals, delivering meals to our area's home-bound residents, and the Glen Rock Co-Op Nursery School."
+  },
+  "thrift_shop": {
+    "intro":           "Please consider donating your pre-loved items to the Community Thrift Shop in Midland Park and mention or mark your bags CHARITY #3. A portion of the proceeds will go to CCGR.",
+    "location":        "85 Godwin Ave., Midland Park",
+    "location_phone":  "(201) 785-4189",
+    "items_accepted":  "in-season clothes, shoes and accessories, small household items, children's toys, books (hard cover must have jacket), paperbacks in good condition.",
+    "donation_hours":  "Monday 9 a.m. – 12 noon",
+    "shopping_hours":  "Tuesday, Thursday, Saturday — 10 a.m. – 4 p.m.",
+    "contact_note":    "(201) 444-4625"
+  }
+}

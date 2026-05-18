@@ -1,0 +1,29 @@
+{
+  "services": {
+    "items": [
+      { "label": "Sunday Worship Service",         "detail": "Every Sunday at 10:00 am in our air-conditioned sanctuary, featuring word and music." },
+      { "label": "Additional Services",            "detail": "Services added during the Advent Season and Holy Week." },
+      { "label": "Sacraments",                     "detail": "Holy Baptism (including infants and adults) and the Lord's Supper (Communion) celebrated on the 1st Sunday of each month." },
+      { "label": "Church School and Youth Group",  "detail": "Check back for updates." },
+      { "label": "Quiet Space",                    "detail": "Available in the church Narthex for young children during worship." },
+      { "label": "Coffee Hour",                    "detail": "Join us for fellowship and refreshments immediately after the service in the Education Building's Drop-in Center." }
+    ]
+  },
+  "worship_style": {
+    "headline":    "Worship Style",
+    "subheadline": "Rooted in Reverence, Inclusivity, and Joy",
+    "paragraphs": [
+      "Guided by our belief in the transformative power of faith, our services are designed to create meaningful connections with one another and with the divine. Each Sunday, we come together in our air-conditioned sanctuary to engage in heartfelt expressions of worship through word and music.",
+      "Our worship format blends traditional elements with contemporary expressions, offering a dynamic and enriching experience for all who gather with us. We strive to create an atmosphere of warmth and welcome, where individuals from all walks of life can find acceptance and belonging.",
+      "Our services feature a balance of prayer, scripture readings, sermons, and musical offerings, designed to inspire and uplift the soul. Whether you are seeking solace, inspiration, or community, our worship services provide a sacred space for reflection, renewal, and connection."
+    ]
+  },
+  "special_occasions": {
+    "intro": "The Community Church of Glen Rock is conveniently located to public transportation and situated on quiet, spacious grounds. We welcome the use of our beautiful campus by interested parties in the extended community. Contact Kris Roy, Property Manager for more information.",
+    "venues": [
+      { "title": "Fellowship Hall",    "description": "Spacious hall for lectures, conferences, receptions, and events." },
+      { "title": "Education Building", "description": "Intimate adjoining spaces in our education building for smaller gatherings." },
+      { "title": "Sanctuary",          "description": "Stunning sanctuary with excellent acoustics for weddings and concerts." }
+    ]
+  }
+}

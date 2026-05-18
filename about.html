@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us — Community Church of Glen Rock | Glen Rock, NJ</title>
   <meta name="description" content="Learn about Community Church of Glen Rock's rich history, leadership, and mission. A welcoming congregation in Glen Rock, NJ since 1895.">
@@ -9,7 +10,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="About Us — Community Church of Glen Rock | Glen Rock, NJ">
   <meta property="og:description" content="Learn about Community Church of Glen Rock's rich history, leadership, and mission. A welcoming congregation in Glen Rock, NJ since 1895.">
-  <meta property="og:image" content="https://communitychurchgr.com/images/hero-about.jpg">
+  <meta property="og:image" content="https://communitychurchgr.com/images/26_05_18photos/stained-glass-windows-and-chandelier.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://communitychurchgr.com/about.html">
 
@@ -353,8 +354,14 @@
   }
   </script>
 
-  <!-- GA4 — replace G-XXXXXXXX when client provides ID -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script> -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VWL0PHCQ7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4VWL0PHCQ7');
+  </script>
 </head>
 
 <body data-content="about">
@@ -441,8 +448,8 @@
     <!-- ========== 1. PAGE HERO ========== -->
     <section class="hero hero-short">
       <div class="hero-bg">
-        <img src="images/hero-about.jpg"
-             alt="Community Church of Glen Rock">
+        <img src="images/26_05_18photos/congregation-seated-in-sanctuary.jpg"
+             alt="Community Church of Glen Rock sanctuary">
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
@@ -457,10 +464,10 @@
 
     <!-- ========== 3. PHOTO STRIP — OUR CHURCH ========== -->
     <div class="photo-strip">
-      <div class="photo-strip-item"><img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/congregation.jpg" alt="Congregation gathered for worship" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/choir.jpg" alt="Church choir performing" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/fellowship-hall.jpg" alt="Fellowship Hall" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/teen-boy-with-christmas-plates.jpg" alt="Church sanctuary interior" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/two-boys-at-easter-craft-table.jpg" alt="Congregation gathered for worship" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/woman-holding-white-earmuffs.jpg" alt="Church choir performing" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/woman-in-christmas-sweater-at-gift-table.jpg" alt="Fellowship Hall" loading="lazy"></div>
     </div>
 
     <!-- ========== 4. OUR MINISTER ========== -->
@@ -477,17 +484,18 @@
                  alt="Rev. Mark William Ennis"
                  width="380" height="460">
           </div>
-          <img src="images/sermon.jpg" alt="Sunday sermon" class="minister-accent-photo" loading="lazy">
+          <img src="images/26_05_18photos/pastor-at-pulpit-during-service.jpg" alt="Sunday sermon" class="minister-accent-photo" loading="lazy">
         </div>
 
         <div class="minister-bio">
           <span class="section-label">Our Minister</span>
-          <h2>I'm Rev. Mark William Ennis</h2>
-          <p>God called me to ministry when I was four years old, and I have been an ordained minister in the Reformed Church in America for the past forty years. I have ministered in parish settings as I've nurtured, counselled, preached, and prayed with people of all ages, backgrounds, and experiences. I developed a love for storytelling as a volunteer chaplain at a Christian summer camp. Currently, I am an interim pastor and hospice chaplain. I am a preacher, teacher, weekly blogger and podcaster, as well as the author of two books, about people who are healing spiritually, with a third in process. I can help you on your journey toward spiritual growth or healing. Contact me if you would like my assistance and please hear my podcasts and read my blogs. I hope that they will bless you.</p>
+          <h2 data-cms="minister-name">I'm Rev. Mark William Ennis</h2>
+          <p data-cms="minister-bio">God called me to ministry when I was four years old, and I have been an ordained minister in the Reformed Church in America for the past forty years. I have ministered in parish settings as I've nurtured, counselled, preached, and prayed with people of all ages, backgrounds, and experiences. I developed a love for storytelling as a volunteer chaplain at a Christian summer camp. Currently, I am an interim pastor and hospice chaplain. I am a preacher, teacher, weekly blogger and podcaster, as well as the author of two books, about people who are healing spiritually, with a third in process. I can help you on your journey toward spiritual growth or healing. Contact me if you would like my assistance and please hear my podcasts and read my blogs. I hope that they will bless you.</p>
           <a href="https://www.youtube.com/@communitychurchofglenrock8594/stream"
              class="btn btn-gold"
              target="_blank"
-             rel="noopener">View our LIVE stream here each Sunday at 10:00am</a>
+             rel="noopener"
+             data-cms="minister-cta">View our LIVE stream here each Sunday at 10:00am</a>
         </div>
 
       </div>
@@ -500,7 +508,7 @@
 
     <section class="staff-section" id="leadership">
       <div class="staff-bg">
-        <img src="images/contemporary-service.jpg" alt="Church community" loading="lazy">
+        <img src="images/26_05_18photos/congregation-reading-during-church-service.jpg" alt="Church community" loading="lazy">
       </div>
       <div class="staff-overlay"></div>
       <div class="staff-inner">
@@ -552,14 +560,14 @@
     </div>
 
     <section class="consistory-section" id="consistory">
-      <div class="consistory-content reveal">
+      <div class="consistory-content reveal" id="cms-consistory-intro">
         <p>RCA churches are governed by a Consistory composed of elders and deacons, elected by the congregation, and ordained into their offices. They are responsible for all aspects of the life of our congregation.</p>
         <p>Elders have as their primary task the spiritual health of the congregation. Together as the Board of Elders they handle all matters concerning membership, including receiving new members and approving requests for baptism.</p>
         <p>Deacons care for the material well-being of members of the church and the community. They have primary responsibility for the mission of the congregation as well as the congregation's physical properties.</p>
         <p>The Community Church of Glen Rock has seven elders and seven deacons who serve on the consistory. Each is elected to a three-year term and can be re-elected to one further term.</p>
       </div>
 
-      <div class="consistory-grid reveal-stagger">
+      <div class="consistory-grid reveal-stagger" id="cms-consistory-members">
 
         <div class="staff-card">
           <div class="initials-placeholder">KS</div>
@@ -619,22 +627,22 @@
 
     <section class="history-section" id="history">
       <div class="history-content reveal">
-        <p>The Community Church of Glen Rock began life with 20 members as the Reformed Church of Glen Rock in 1895. Meetings were first held in homes and then in the 'Red Schoolhouse,' which still stands at the corner of Rock Road and Ackerman Avenue. The Reverend John A. Van Neste preached there as well as in his own church in Ridgewood. In 1896 a small church was built, known as the 'little White Church.'</p>
+        <p data-cms="history-0">The Community Church of Glen Rock began life with 20 members as the Reformed Church of Glen Rock in 1895. Meetings were first held in homes and then in the 'Red Schoolhouse,' which still stands at the corner of Rock Road and Ackerman Avenue. The Reverend John A. Van Neste preached there as well as in his own church in Ridgewood. In 1896 a small church was built, known as the 'little White Church.'</p>
 
-        <p>In 1920 our name was changed to The Community Church of Glen Rock, signaling that the church intended to be a church of and for the local community. By 1924 the church had outgrown its first building and erected its second building, the 'Stucco Church,' on the same site. The original building was used for education and remained in use into the 1950s.</p>
+        <p data-cms="history-1">In 1920 our name was changed to The Community Church of Glen Rock, signaling that the church intended to be a church of and for the local community. By 1924 the church had outgrown its first building and erected its second building, the 'Stucco Church,' on the same site. The original building was used for education and remained in use into the 1950s.</p>
 
-        <img src="images/front.jpg" alt="Community Church of Glen Rock exterior" class="history-inline-photo" loading="lazy">
+        <img src="images/26_05_18photos/congregation-gathering-in-sanctuary.jpg" alt="Community Church of Glen Rock exterior" class="history-inline-photo" loading="lazy">
 
-        <p>Following the end of World War II the population of Glen Rock more than doubled as land was cleared, homes were built, schools were built or added onto, and our church again faced the need for expansion. In 1950 the Church began excavation for a new Sanctuary to be attached to the rear of the Stucco Church.</p>
+        <p data-cms="history-2">Following the end of World War II the population of Glen Rock more than doubled as land was cleared, homes were built, schools were built or added onto, and our church again faced the need for expansion. In 1950 the Church began excavation for a new Sanctuary to be attached to the rear of the Stucco Church.</p>
 
         <div class="history-photo-pair">
-          <img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy">
-          <img src="images/memorial-garden.jpg" alt="Memorial garden" loading="lazy">
+          <img src="images/26_05_18photos/young-girl-painting-rock-at-craft-table.jpg" alt="Church sanctuary interior" loading="lazy">
+          <img src="images/26_05_18photos/stained-glass-windows-and-chandelier.jpg" alt="Memorial garden" loading="lazy">
         </div>
 
-        <p>In 1958 the Education Building was constructed. In 1965 following several property acquisitions the large Fellowship Hall was built and the Stucco Church was demolished to make way for a new entrance to the sanctuary. Along with expanded parking the campus occupies a large piece of property in the center of the Borough.</p>
+        <p data-cms="history-3">In 1958 the Education Building was constructed. In 1965 following several property acquisitions the large Fellowship Hall was built and the Stucco Church was demolished to make way for a new entrance to the sanctuary. Along with expanded parking the campus occupies a large piece of property in the center of the Borough.</p>
 
-        <p>In 1994 the most recent major work was the complete refurbishing and rearrangement of the worship space as well as the installation of the beautiful stained-glass windows, which are the pride of the congregation.</p>
+        <p data-cms="history-4">In 1994 the most recent major work was the complete refurbishing and rearrangement of the worship space as well as the installation of the beautiful stained-glass windows, which are the pride of the congregation.</p>
       </div>
     </section>
 
@@ -652,7 +660,7 @@
       <div class="facilities-cards-grid reveal-stagger">
 
         <div class="facility-card-photo">
-          <img src="images/fellowship-hall.jpg" alt="Fellowship Hall" loading="lazy">
+          <img src="images/26_05_18photos/two-women-standing-in-fellowship-hall.jpg" alt="Fellowship Hall" loading="lazy">
           <div class="card-content">
             <h3>Fellowship Hall</h3>
             <p>A 35 x 60 foot space ideal for lectures, conferences, receptions and events.</p>
@@ -660,7 +668,7 @@
         </div>
 
         <div class="facility-card-photo">
-          <img src="images/room1.jpg" alt="Education building meeting room" loading="lazy">
+          <img src="images/26_05_18photos/youth-and-adults-near-stained-glass.jpg" alt="Education building meeting room" loading="lazy">
           <div class="card-content">
             <h3>Education Building</h3>
             <p>Two intimate adjoining spaces measuring 24 x 36 feet each, perfect for smaller gatherings.</p>
@@ -668,7 +676,7 @@
         </div>
 
         <div class="facility-card-photo">
-          <img src="images/interior.jpg" alt="Church sanctuary interior" loading="lazy">
+          <img src="images/26_05_18photos/christmas-gathering-four-women-standing.jpg" alt="Church sanctuary interior" loading="lazy">
           <div class="card-content">
             <h3>Sanctuary</h3>
             <p>Our gorgeous sanctuary with excellent acoustics is available to rent for weddings and concerts.</p>
@@ -685,18 +693,18 @@
 
     <section class="membership-section" id="membership">
       <div class="membership-content reveal">
-        <p>There are two avenues to membership in the Community Church of Glen Rock. If you are a member of another Christian church, we receive you by letter of transfer. If you are becoming a first time church member, you make a profession of faith. You can begin your journey to becoming a member by contacting one of the pastors.</p>
-        <p>The Board of Elders receives all new members who are welcomed at a service of public worship.</p>
-        <p>Community Church holds regular orientation sessions for all who desire membership. These gatherings are intended to welcome new people by describing the life and ministry of this Christian community.</p>
+        <p data-cms="about-membership-0">There are two avenues to membership in the Community Church of Glen Rock. If you are a member of another Christian church, we receive you by letter of transfer. If you are becoming a first time church member, you make a profession of faith. You can begin your journey to becoming a member by contacting one of the pastors.</p>
+        <p data-cms="about-membership-1">The Board of Elders receives all new members who are welcomed at a service of public worship.</p>
+        <p data-cms="about-membership-2">Community Church holds regular orientation sessions for all who desire membership. These gatherings are intended to welcome new people by describing the life and ministry of this Christian community.</p>
       </div>
     </section>
 
     <!-- ========== 10. GALLERY STRIP ========== -->
     <div class="photo-strip">
-      <div class="photo-strip-item"><img src="images/christmas-eve.jpg" alt="Christmas Eve candlelight service" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/communion.jpg" alt="Communion Sunday" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/luncheon.jpg" alt="Community luncheon gathering" loading="lazy"></div>
-      <div class="photo-strip-item"><img src="images/palm-sunday.jpg" alt="Palm Sunday celebration" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/boy-scouts-lined-up-near-chancel.jpg" alt="Christmas Eve candlelight service" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/communion-elements-chalice-and-bread.jpg" alt="Communion Sunday" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/christmas-luncheon-group-at-decorated-table.jpg" alt="Community luncheon gathering" loading="lazy"></div>
+      <div class="photo-strip-item"><img src="images/26_05_18photos/congregation-gathering-near-hymn-board.jpg" alt="Palm Sunday celebration" loading="lazy"></div>
     </div>
 
     <!-- ========== 11. GOLD CTA BAR ========== -->
@@ -740,7 +748,7 @@
         <h4>Find Us</h4>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5!2d-74.1299!3d40.9601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s354+Rock+Road%2C+Glen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1"
-          width="100%" height="190" style="border:0;border-radius:4px;"
+          width="100%" height="190"
           allowfullscreen loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Map to Community Church of Glen Rock">
@@ -764,13 +772,13 @@
     <div class="ccgr-popup">
       <button class="ccgr-popup__close" type="button" aria-label="Close welcome message" data-ccgr-popup-close>&times;</button>
       <div class="ccgr-popup__photo" aria-hidden="true">
-        <img src="images/congregation.jpg" alt="">
+        <img src="images/26_05_18photos/colorful-dyed-easter-eggs-in-carton.jpg" alt="">
       </div>
       <div class="ccgr-popup__content">
         <img src="images/logo.png" alt="Community Church of Glen Rock" class="ccgr-popup__logo">
         <span class="ccgr-popup__label">Welcome</span>
         <h2 class="ccgr-popup__heading" id="ccgrPopupHeading">Join us, in person &amp; online</h2>
-        <ul class="ccgr-popup__links">
+        <ul class="ccgr-popup__links" id="cms-popup-links">
           <li>
             <a href="https://www.youtube.com/@communitychurchofglenrock8594/streams" class="ccgr-popup__link" target="_blank" rel="noopener">
               <span>
