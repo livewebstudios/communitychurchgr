@@ -141,7 +141,10 @@
     var loginScreen   = document.getElementById('lws-login');
     var loadingScreen = document.getElementById('lws-loading');
 
+    var cmsLoaded = false;
     function loadCMS() {
+      if (cmsLoaded) { return; }
+      cmsLoaded = true;
       document.body.innerHTML = '';
       var script = document.createElement('script');
       script.src = 'https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js';
