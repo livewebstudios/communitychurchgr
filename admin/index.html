@@ -142,8 +142,7 @@
     var loadingScreen = document.getElementById('lws-loading');
 
     function loadCMS() {
-      loginScreen.style.display   = 'none';
-      loadingScreen.style.display = 'flex';
+      document.body.innerHTML = '';
       var script = document.createElement('script');
       script.src = 'https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js';
       document.head.appendChild(script);
