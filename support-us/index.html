@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Us | Community Church of Glen Rock</title>
+  <meta name="description" content="Support the mission of Community Church of Glen Rock. Give securely through PayPal, Venmo, or Zelle and help us serve our community in Glen Rock, NJ and beyond.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Support Us | Community Church of Glen Rock">
+  <meta property="og:description" content="Your generosity sustains worship, outreach, and missions near and far. Give securely through PayPal, Venmo, or Zelle.">
+  <meta property="og:image" content="https://communitychurchgr.com/images/give.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://communitychurchgr.com/support-us/">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://communitychurchgr.com/support-us/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Support Us page-specific styles -->
+  <style>
+    /* ---- GIVING INTRO ---- */
+    .give-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .give-intro p {
+      max-width: 65ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .give-scripture {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+      line-height: 1.4;
+      color: var(--teal-dk);
+      max-width: 30ch;
+      margin: 2.5rem auto 0;
+    }
+    .give-scripture cite {
+      display: block;
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-size: var(--text-caption);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 1rem;
+    }
+
+    /* ---- GIVING CARDS ---- */
+    .give-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: clamp(2.75rem, 5vw, 4rem);
+    }
+    .give-card {
+      background: var(--white);
+      border: 1px solid var(--border-brand);
+      border-radius: 16px;
+      padding: 2rem 1.75rem 2.25rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 14px 36px rgba(58, 107, 107, 0.08);
+      transition: transform 0.38s var(--ease-out-quart), box-shadow 0.38s var(--ease-out-quart);
+    }
+    .give-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(58, 107, 107, 0.16);
+    }
+    .give-card h3 {
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .give-card__img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--cream-dk);
+    }
+    .give-card p {
+      font-size: var(--text-body-soft);
+      color: var(--muted);
+      margin-top: 1.4rem;
+      max-width: 32ch;
+    }
+
+    /* ---- OTHER WAYS TO GIVE ---- */
+    .give-other {
+      text-align: center;
+      max-width: 680px;
+      margin: clamp(3rem, 6vw, 4.5rem) auto 0;
+      padding-top: clamp(2.5rem, 5vw, 3.5rem);
+      border-top: 1px solid var(--border-brand);
+    }
+    .give-other h2 {
+      margin-bottom: 1rem;
+    }
+    .give-other p {
+      max-width: 60ch;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .give-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+    }
+  </style>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Support Us | Community Church of Glen Rock",
+    "url": "https://communitychurchgr.com/support-us/",
+    "description": "Give securely to Community Church of Glen Rock through PayPal, Venmo, or Zelle.",
+    "isPartOf": {
+      "@type": "Church",
+      "name": "Community Church of Glen Rock",
+      "url": "https://communitychurchgr.com/",
+      "telephone": "+1-201-444-4625",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "354 Rock Road",
+        "addressLocality": "Glen Rock",
+        "addressRegion": "NJ",
+        "postalCode": "07452",
+        "addressCountry": "US"
+      }
+    },
+    "potentialAction": {
+      "@type": "DonateAction",
+      "name": "Donate to Community Church of Glen Rock",
+      "target": "https://communitychurchgr.com/support-us/"
+    }
+  }
+  </script>
+  <!-- LWS MASTER DESIGN SYSTEM — experimental override (remove to revert) -->
+  <link rel="stylesheet" href="../css/lws-master.css">
+</head>
+<body data-content-base="../">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========== UTILITY BAR ========== -->
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <a href="tel:+12014444625">CALL: 201.444.4625</a>
+      <a href="#">EVENT CALENDAR</a>
+      <a href="../about.html#membership">MEMBERSHIP</a>
+      <a href="index.html">SUPPORT US</a>
+    </div>
+  </div>
+
+  <!-- ========== MAIN NAV ========== -->
+  <header class="site-header" id="site-header">
+    <nav class="site-nav">
+
+      <a href="../index.html" class="nav-brand">
+        <img src="../images/logo.png"
+             alt="Community Church of Glen Rock"
+             width="220" height="auto">
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="../about.html" class="nav-link">
+            About <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="../about.html#history">Our Story &amp; History</a></li>
+            <li><a href="../about.html#minister">Our Minister</a></li>
+            <li><a href="../about.html#leadership">Leadership Team</a></li>
+            <li><a href="../about.html#consistory">Consistory</a></li>
+            <li><a href="../about.html#membership">Membership</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="../worship.html" class="nav-link">
+            Worship <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="../worship.html#services">Sunday Services</a></li>
+            <li><a href="../worship.html#livestream">Live Stream</a></li>
+            <li><a href="../worship.html#special-occasions">Special Occasions</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="../programs.html" class="nav-link">
+            Programs &amp; Ministries <span class="arrow">&#9662;</span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="../programs.html#all">All Programs</a></li>
+            <li><a href="../programs.html#outreach">Outreach</a></li>
+            <li><a href="../programs.html#thrift-shop">Thrift Shop</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="../blog/" class="nav-link">Blog</a>
+        </li>
+
+        <li>
+          <a href="../contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== 1. HERO ========== -->
+    <section class="hero hero-short">
+      <div class="hero-bg">
+        <img src="../images/give.jpg"
+             alt="Hands joined in giving and fellowship at Community Church of Glen Rock">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="section-label">Giving</span>
+        <h1>Support Us</h1>
+      </div>
+    </section>
+
+    <!-- ========== 2. INTRO ========== -->
+    <section class="section">
+      <div class="container">
+        <div class="give-intro reveal">
+          <span class="section-label">Your Generosity at Work</span>
+          <h2>Every Gift Makes a Difference</h2>
+          <p>Your generosity keeps the doors of Community Church of Glen Rock open &mdash; sustaining heartfelt worship, caring for our congregation, and reaching far beyond our walls. Gifts of every size support our missions in New Jersey and Kenya, our Community Meals ministry for home-bound neighbors, and the everyday work of sharing love, compassion, and hope.</p>
+          <p>Giving has never been easier. Choose whichever option below is most convenient for you, and know that every contribution is received with deep gratitude.</p>
+          <p class="give-scripture">
+            &ldquo;Each of you should give what you have decided in your heart to give &mdash; for God loves a cheerful giver.&rdquo;
+            <cite>2 Corinthians 9:7</cite>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. WAYS TO GIVE ========== -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="give-grid reveal-stagger">
+
+          <div class="give-card">
+            <h3>PayPal</h3>
+            <img src="pay-pal.png" alt="Give to Community Church of Glen Rock with PayPal" class="give-card__img" loading="lazy">
+            <p>Scan the code or search for us on PayPal to give securely in seconds.</p>
+          </div>
+
+          <div class="give-card">
+            <h3>Venmo</h3>
+            <img src="venmo.png" alt="Give to Community Church of Glen Rock with Venmo" class="give-card__img" loading="lazy">
+            <p>Open Venmo, scan the code, and send your gift directly from your phone.</p>
+          </div>
+
+          <div class="give-card">
+            <h3>Zelle</h3>
+            <img src="zelle.png" alt="Give to Community Church of Glen Rock with Zelle" class="give-card__img" loading="lazy">
+            <p>Use Zelle through your bank to make a fast, fee-free contribution.</p>
+          </div>
+
+        </div>
+
+        <!-- ========== 4. OTHER WAYS TO GIVE ========== -->
+        <div class="give-other reveal">
+          <h2>Prefer to Give in Person or by Mail?</h2>
+          <p>You are always welcome to place your gift in the Sunday offering, or mail a check to <strong>Community Church of Glen Rock, 354 Rock Road, Glen Rock, NJ 07452</strong>. Questions about giving? Call us at <a href="tel:+12014444625">(201) 444-4625</a> &mdash; we are happy to help.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p data-cms="footer-address">354 Rock Road, Glen Rock, NJ 07452</p>
+        <p><a href="mailto:info@communitychurchgr.com" data-cms="footer-email">info@communitychurchgr.com</a></p>
+        <p><a href="tel:+12014444625" data-cms="footer-phone">(201) 444-4625</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../about.html#leadership">Leadership Team</a></li>
+          <li><a href="../worship.html">Worship</a></li>
+          <li><a href="../programs.html">Programs &amp; Ministries</a></li>
+          <li><a href="../worship.html#special-occasions">Special Occasions</a></li>
+          <li><a href="../blog/">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#">Event Calendar</a></li>
+          <li><a href="../about.html#membership">Membership</a></li>
+          <li><a href="index.html">Support Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.5!2d-74.1299!3d40.9601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s354+Rock+Road%2C+Glen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1"
+          width="100%" height="190"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Community Church of Glen Rock">
+        </iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="https://livewebstudios.com" target="_blank" rel="noopener">
+        <img src="../images/verifiedsecured.png" alt="Verified and Secured by Live Web Studios" width="110" height="auto">
+      </a>
+      <p>&copy; 2025 LIVEWEBSTUDIOS.COM &mdash; POWERED BY LIVE WEB STUDIOS</p>
+    </div>
+  </footer>
+
+  <!-- ========== WELCOME POPUP ========== -->
+  <div class="ccgr-popup-overlay" id="ccgrPopup" role="dialog" aria-modal="true" aria-labelledby="ccgrPopupHeading" hidden>
+    <div class="ccgr-popup">
+      <button class="ccgr-popup__close" type="button" aria-label="Close welcome message" data-ccgr-popup-close>&times;</button>
+      <div class="ccgr-popup__photo" aria-hidden="true">
+        <img src="../images/26_05_18photos/congregation-seated-in-sanctuary.jpg" alt="">
+      </div>
+      <div class="ccgr-popup__content">
+        <img src="../images/logo.png" alt="Community Church of Glen Rock" class="ccgr-popup__logo">
+        <span class="ccgr-popup__label">Welcome</span>
+        <h2 class="ccgr-popup__heading" id="ccgrPopupHeading">Join us, in person &amp; online</h2>
+        <ul class="ccgr-popup__links" id="cms-popup-links">
+          <li>
+            <a href="https://www.youtube.com/@communitychurchofglenrock8594/streams" class="ccgr-popup__link" target="_blank" rel="noopener">
+              <span>
+                <span class="ccgr-popup__link-when">Sunday 10 AM</span>
+                <span class="ccgr-popup__link-title">Live Stream</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://us02web.zoom.us/j/85619405313" class="ccgr-popup__link" target="_blank" rel="noopener">
+              <span>
+                <span class="ccgr-popup__link-when">Wednesday 8 PM</span>
+                <span class="ccgr-popup__link-title">Bible Study on Zoom</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://communitychurchgr.shelbynextchms.com/external/form/26d6523b-dbbd-49a8-b18a-46ccf4ece0b8" class="ccgr-popup__link" target="_blank" rel="noopener">
+              <span>
+                <span class="ccgr-popup__link-when">Stay Connected</span>
+                <span class="ccgr-popup__link-title">Join Our Email List</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://communitychurchgr.shelbynextchms.com/external/form/73ad9f47-3634-439f-8f99-874bec3c57b5" class="ccgr-popup__link" target="_blank" rel="noopener">
+              <span>
+                <span class="ccgr-popup__link-when">We're Here</span>
+                <span class="ccgr-popup__link-title">Submit a Prayer Request</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.amazon.com/She-Called-Women-Bible-Study/dp/0916466221" class="ccgr-popup__link" target="_blank" rel="noopener">
+              <span>
+                <span class="ccgr-popup__link-when">Fall Sunday AM Bible Study</span>
+                <span class="ccgr-popup__link-title">Book Link</span>
+              </span>
+              <span class="ccgr-popup__link-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+        </ul>
+        <button type="button" class="ccgr-popup__dismiss" data-ccgr-popup-close>No thanks</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/nav.js"></script>
+  <script src="../cms-loader.js"></script>
+  <script src="../js/popup.js"></script>
+</body>
+</html>
