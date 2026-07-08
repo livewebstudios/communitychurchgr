@@ -1891,6 +1891,7 @@ p {
   .has-dropdown.open .dropdown {
     max-height: 400px;
     padding: 0 0 0.5rem;
+    transform: none;
   }
 
   .dropdown a {
