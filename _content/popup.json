@@ -38,7 +38,7 @@
       "new_tab": true
     },
     {
-      "new_tab": true,
+      "new_tab": false,
       "url": "images/uploads/fall-upcoming-events.jpg",
       "when": "Upcoming Events",
       "title": "Check out our calendar!"
