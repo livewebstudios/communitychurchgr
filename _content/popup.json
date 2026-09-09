@@ -2,6 +2,12 @@
   "heading": "Join us, in person &amp; online",
   "links": [
     {
+      "new_tab": true,
+      "when": "10/24 7pm STAY TUNED FOR TICKET INFORMATION",
+      "title": "Neil Berg's Pianomen",
+      "url": "https://www.eventbrite.com/?msockid=1bf98f8755706a2a290d99dc54806b26"
+    },
+    {
       "when": "Sunday 10 AM",
       "title": "Live Stream",
       "url": "https://www.youtube.com/@communitychurchofglenrock8594/streams",
@@ -30,12 +36,6 @@
       "title": "Book Link",
       "url": "https://www.amazon.com/She-Called-Women-Bible-Study/dp/0916466221",
       "new_tab": true
-    },
-    {
-      "new_tab": true,
-      "when": "10/24 7pm STAY TUNED FOR TICKET INFORMATION",
-      "title": "Neil Berg's Pianomen",
-      "url": "https://www.eventbrite.com/?msockid=1bf98f8755706a2a290d99dc54806b26"
     }
   ]
 }
