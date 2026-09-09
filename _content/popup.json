@@ -36,6 +36,12 @@
       "title": "Book Link",
       "url": "https://www.amazon.com/She-Called-Women-Bible-Study/dp/0916466221",
       "new_tab": true
+    },
+    {
+      "new_tab": true,
+      "url": "images/uploads/fall-upcoming-events.jpg",
+      "when": "Upcoming Events",
+      "title": "Check out our calendar!"
     }
   ]
 }
