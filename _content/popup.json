@@ -42,6 +42,12 @@
       "url": "images/uploads/fall-upcoming-events.jpg",
       "when": "Upcoming Events",
       "title": "Check out our calendar!"
+    },
+    {
+      "new_tab": true,
+      "url": "images/uploads/9-6-26-bulletin.docx.pdf",
+      "when": "Weekly Bulletin 9/6",
+      "title": "Check out our weekly bulletin!"
     }
   ]
 }
