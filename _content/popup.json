@@ -14,6 +14,12 @@
       "new_tab": true
     },
     {
+      "new_tab": false,
+      "url": "images/uploads/9-6-26-bulletin.docx.pdf",
+      "when": "Weekly Bulletin 9/6",
+      "title": "Check out our weekly bulletin!"
+    },
+    {
       "when": "Wednesday 8 PM",
       "title": "Bible Study on Zoom",
       "url": "https://us02web.zoom.us/j/85619405313",
@@ -42,12 +48,6 @@
       "url": "images/uploads/fall-upcoming-events.jpg",
       "when": "Upcoming Events",
       "title": "Check out our calendar!"
-    },
-    {
-      "new_tab": true,
-      "url": "images/uploads/9-6-26-bulletin.docx.pdf",
-      "when": "Weekly Bulletin 9/6",
-      "title": "Check out our weekly bulletin!"
     }
   ]
 }
