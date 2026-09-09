@@ -7,14 +7,10 @@
       "The Community Church of Glen Rock has seven elders and seven deacons who serve on the consistory. Each is elected to a three-year term and can be re-elected to one further term."
     ],
     "members": [
-      { "name": "Keith Stewart",      "role": "Deacon" },
-      { "name": "John Van Keuren",    "role": "Elder"  },
-      { "name": "Gail Sternitzke",    "role": "Elder"  },
-      { "name": "Laura Bird",         "role": "Deacon" },
-      { "name": "Jessica Fry",        "role": "Deacon" },
-      { "name": "Stephanie Beaudoin", "role": "Deacon" },
-      { "name": "Betty Vella",        "role": "Elder"  },
-      { "name": "Leslie Botz",        "role": "Deacon" }
+      {
+        "name": "John Van Keuren",
+        "role": "Elder"
+      }
     ]
   },
   "history": {
