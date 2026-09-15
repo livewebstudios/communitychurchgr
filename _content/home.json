@@ -1,30 +1,30 @@
 {
   "ministry_cards": [
     {
-      "title":       "Worship",
+      "title": "Worship",
       "description": "A sacred gathering where hearts unite in praise, reflection, and spiritual growth."
     },
     {
-      "title":       "Ministry",
+      "title": "Ministry",
       "description": "The embodiment of compassion and service, enriching lives and fostering belonging within our congregation."
     },
     {
-      "title":       "Membership",
+      "title": "Membership",
       "description": "More than a commitment — an invitation to join a supportive community and grow in faith together."
     }
   ],
   "mission": {
-    "headline":    "Our Mission",
+    "headline": "Our Mission",
     "subheadline": "A Vibrant and Inclusive Spiritual Community",
-    "body":        "A vibrant and inclusive spiritual community where individuals from all walks of life can find acceptance, support, and opportunities for personal and collective growth. Rooted in the teachings of Jesus Christ, we strive to embody love, compassion, and justice in our interactions with one another and the world around us. Through meaningful worship, transformative ministries, and intentional fellowship, we seek to cultivate an environment where all are empowered to explore their faith, nurture their spiritual journey, and make a positive difference in the lives of others."
+    "body": "A vibrant and inclusive spiritual community where individuals from all walks of life can find acceptance, support, and opportunities for personal and collective growth. Rooted in the teachings of Jesus Christ, we strive to embody love, compassion, and justice in our interactions with one another and the world around us. Through meaningful worship, transformative ministries, and intentional fellowship, we seek to cultivate an environment where all are empowered to explore their faith, nurture their spiritual journey, and make a positive difference in the lives of others."
   },
   "membership_support": {
-    "membership_headline":    "Membership",
+    "membership_headline": "Membership",
     "membership_description": "Experience the warmth of our community and the richness of spiritual growth — join us today!",
-    "membership_cta":         "Join Us",
-    "support_headline":       "Support Us",
-    "support_description":    "Make a meaningful impact in our community and help us spread love, compassion, and hope — support us today!",
-    "support_cta":            "Donate",
-    "donation_url":           "#"
+    "membership_cta": "Join Us",
+    "support_headline": "Support Us",
+    "support_description": "Make a meaningful impact in our community and help us spread love, compassion, and hope — support us today!",
+    "support_cta": "Donate",
+    "donation_url": "Zelle payments to finance@communitychurchgr.com"
   }
 }
