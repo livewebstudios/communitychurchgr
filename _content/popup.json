@@ -3,6 +3,12 @@
   "links": [
     {
       "new_tab": true,
+      "when": "Check here for 9/27 service updates",
+      "title": "We are watching the weather for this weekend!",
+      "url": "https://www.youtube.com/@communitychurchofglenrock8594/streams"
+    },
+    {
+      "new_tab": true,
       "when": "Neil Berg's Pianomen, Saturday October 24th at 7pm",
       "title": "TICKETS ARE ON SALE NOW!",
       "url": "https://www.eventbrite.com/e/neil-bergs-pianomen-tickets-2001580689724?aff=ebdssbdestsearch"
@@ -42,12 +48,6 @@
       "title": "A new format this fall being held during coffee hour...",
       "url": "images/uploads/fall-sermon-discussions.jpg",
       "new_tab": true
-    },
-    {
-      "new_tab": true,
-      "when": "Check here for 9/27 service updates",
-      "title": "We are watching the weather for this weekend!",
-      "url": "https://www.youtube.com/@communitychurchofglenrock8594/streams"
     }
   ]
 }
