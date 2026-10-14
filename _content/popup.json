@@ -9,12 +9,6 @@
     },
     {
       "new_tab": true,
-      "when": "Donation Link",
-      "title": "Every gift makes a difference!",
-      "url": "https://www.paypal.com/ncp/payment/VJ98TDDJ73QCW"
-    },
-    {
-      "new_tab": true,
       "when": "Neil Berg's Pianomen, Saturday October 24th at 7pm",
       "title": "TICKETS ARE ON SALE NOW!",
       "url": "https://www.eventbrite.com/e/neil-bergs-pianomen-tickets-2001580689724?aff=ebdssbdestsearch"
@@ -24,6 +18,12 @@
       "title": "Live Stream",
       "url": "https://www.youtube.com/@communitychurchofglenrock8594/streams",
       "new_tab": true
+    },
+    {
+      "new_tab": true,
+      "when": "Donation Link",
+      "title": "Every gift makes a difference!",
+      "url": "https://www.paypal.com/ncp/payment/VJ98TDDJ73QCW"
     },
     {
       "new_tab": false,
