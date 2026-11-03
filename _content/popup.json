@@ -2,6 +2,12 @@
   "heading": "Join us, in person &amp; online",
   "links": [
     {
+      "new_tab": true,
+      "url": "images/uploads/holiday_plant_wreath_order_form_2026_printable.pdf",
+      "when": "Women's Ministry Annual Plant and Wreath Sale",
+      "title": "Use this order form to order today!"
+    },
+    {
       "when": "Sunday 10 AM",
       "title": "Live Stream",
       "url": "https://www.youtube.com/@communitychurchofglenrock8594/streams",
@@ -42,12 +48,6 @@
       "title": "A new format this fall being held during coffee hour...",
       "url": "images/uploads/fall-sermon-discussions.jpg",
       "new_tab": true
-    },
-    {
-      "new_tab": true,
-      "url": "images/uploads/holiday_plant_wreath_order_form_2026_printable.pdf",
-      "when": "Women's Ministry Annual Plant and Wreath Sale",
-      "title": "Use this order form to order today!"
     }
   ]
 }
