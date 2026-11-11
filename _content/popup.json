@@ -2,6 +2,12 @@
   "heading": "Join us, in person &amp; online",
   "links": [
     {
+      "when": "Sunday 10 AM",
+      "title": "Live Stream",
+      "url": "https://www.youtube.com/@communitychurchofglenrock8594/streams",
+      "new_tab": true
+    },
+    {
       "when": "Sunday Morning Adult Education",
       "title": "Come as you are! Click here for details...",
       "url": "images/uploads/sermon-conversations_-share-reflect-grow.png",
@@ -24,12 +30,6 @@
       "url": "images/uploads/open-me-to-see-all-flyers.pdf",
       "when": "Upcoming Event Flyers",
       "title": "Check out our upcoming events!"
-    },
-    {
-      "when": "Sunday 10 AM",
-      "title": "Live Stream",
-      "url": "https://www.youtube.com/@communitychurchofglenrock8594/streams",
-      "new_tab": true
     },
     {
       "new_tab": true,
