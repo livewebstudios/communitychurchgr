@@ -20,6 +20,12 @@
       "url": " https://events.crophungerwalk.org/chw/event/ridgewoodnj"
     },
     {
+      "new_tab": true,
+      "url": "images/uploads/open-me-to-see-all-flyers.pdf",
+      "when": "Upcoming Event Flyers",
+      "title": "Check out our upcoming events!"
+    },
+    {
       "when": "Sunday 10 AM",
       "title": "Live Stream",
       "url": "https://www.youtube.com/@communitychurchofglenrock8594/streams",
@@ -30,12 +36,6 @@
       "when": "Donation Link",
       "title": "Every gift makes a difference!",
       "url": "https://www.paypal.com/ncp/payment/VJ98TDDJ73QCW"
-    },
-    {
-      "new_tab": false,
-      "url": "images/uploads/flyers-insert-11-8-26.pdf",
-      "when": "Upcoming Event Flyers",
-      "title": "Check out our upcoming events!"
     },
     {
       "when": "Wednesday 8 PM",
